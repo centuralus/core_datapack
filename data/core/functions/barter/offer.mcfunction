@@ -7,7 +7,7 @@ execute if entity @s[scores={barter=0}] store result score @s barter run execute
 #execute if entity @s[scores={barter=1}] at @s run summon minecraft:armor_stand ~ ~ ~ {Tags:["offer"],Invisible:1b,Invulnerable:1b,Marker:1b}
 #execute if entity @s[scores={barter=1}] at @s run item replace entity @e[tag=offer,limit=1,type=armor_stand,distance=0] weapon.offhand from entity @s weapon.offhand
 execute if entity @s[scores={barter=1}] at @s run data modify storage rx:io playerdb.player.data.centural.core set value {offer:{}}
-execute if entity @s[scores={barter=1}] at @s run data modify storage rx:io playerdb.player.data.centural.core.offer set from entity @s Inventory:[{Slot:-106b}]
+execute if entity @s[scores={barter=1}] at @s run data modify storage rx:io playerdb.player.data.centural.core.offer set from entity @s Inventory[{Slot:-106b}]
 execute if entity @s[scores={barter=1}] at @s run item replace entity @s weapon.offhand with air
 execute if entity @s[scores={barter=1}] run function rx.playerdb:api/save_self
 execute if entity @s[scores={barter=0}] run tellraw @s {"text":"You must have something in your off hand to offer."}
