@@ -15,6 +15,11 @@ execute if entity @p[tag=offer_barter] as @a[tag=offer_barter] run function core
 #
 
 #
+execute if entity @e[tag=claim,type=armor_stand] as @e[tag=claim,type=armor_stand] at @s unless entity @p[distance=..1] run kill @s[type=armor_stand]
+#execute if entity @e[tag=offer,type=armor_stand] as @e[tag=offer,type=armor_stand] at @s unless entity @p[distance=..1] run kill @s[type=armor_stand]
+#
+
+#
 execute if entity @p[tag=reset_barter] as @a[tag=reset_barter] run scoreboard players reset @s barter
 execute if entity @p[tag=reset_barter] as @a[tag=reset_barter] run scoreboard players enable @s barter
 execute if entity @p[tag=reset_barter] as @a[tag=reset_barter] run tag @s remove reset_barter

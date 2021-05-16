@@ -7,7 +7,7 @@ execute if entity @s[scores={barter=0}] at @s run summon minecraft:armor_stand ~
 execute if entity @s[scores={barter=0}] at @s run data modify entity @e[tag=claim,distance=0,limit=1,type=minecraft:armor_stand] HandItems[1] set from storage rx:io playerdb.player.data.centural.core.offer
 execute if entity @s[scores={barter=0}] at @s run data modify storage rx:io playerdb.player.data.centural.core set value {offer:{}}
 execute if entity @s[scores={barter=0}] at @s run item replace entity @s weapon.offhand from entity @e[tag=claim,type=minecraft:armor_stand,distance=0,limit=1] weapon.offhand
-execute if entity @s[scores={barter=0}] at @s run kill @e[tag=claim,distance=0,limit=1,type=armor_stand]
+execute if entity @s[scores={barter=0}] at @s run kill @e[tag=claim,distance=..1,limit=1,type=armor_stand]
 execute if entity @s[scores={barter=1..}] run tellraw @s {"text":"You must empty your left hand before claiming an offer."}
 tag @s add reset_barter
 tag @s remove claim_barter
