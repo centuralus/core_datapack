@@ -10,3 +10,4 @@ execute if entity @s[scores={barter=0}] at @s run item replace entity @s weapon.
 execute if entity @s[scores={barter=0}] at @s run kill @e[tag=claim,distance=0,limit=1,type=armor_stand]
 execute if entity @s[scores={barter=1..}] run tellraw @s {"text":"You must empty your left hand before claiming an offer."}
 tag @s add reset_barter
+tag @s remove claim_barter

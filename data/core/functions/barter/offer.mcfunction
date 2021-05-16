@@ -11,3 +11,4 @@ execute if entity @s[scores={barter=1}] at @s run item replace entity @s weapon.
 execute if entity @s[scores={barter=1}] run function rx.playerdb:api/save_self
 execute if entity @s[scores={barter=0}] run tellraw @s {"text":"You must have something in your off hand to offer."}
 tag @s add reset_barter
+tag @s remove offer_barter
