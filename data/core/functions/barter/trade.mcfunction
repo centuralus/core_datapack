@@ -70,3 +70,8 @@ execute if entity @p[tag=reset_trade] as @a[tag=reset_trade] run scoreboard play
 #execute if entity @p[tag=reset_trade] as @a[tag=reset_trade] run scoreboard players enable @s trade
 execute if entity @p[tag=reset_trade] as @a[tag=reset_trade] run tag @s remove reset_trade
 #
+
+#
+execute if entity @e[tag=receive,type=armor_stand] run kill @e[tag=receive,type=armor_stand]
+execute if entity @e[tag=trade,type=armor_stand] run kill @e[tag=trade,type=armor_stand]
+#
