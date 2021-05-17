@@ -3,7 +3,21 @@ execute as @a unless entity @s[scores={trade=-2147483648..2147483647}] run score
 execute if entity @p[scores={trade=1..}] as @a[scores={trade=1..}] run tag @s add reset_trade
 execute if entity @p[scores={trade=..-1}] as @a[scores={trade=..-1}] run tag @s add reset_trade
 
+#
+execute if entity @p[scores={trade=-2}] as @a[scores={trade=-2}] run function rx.playerdb:api/get_self
 
+execute if entity @p[scores={trade=-2}] as @a[scores={trade=-2}] run data modify storage rx:io playerdb.player.data.centural.core.barter.trade set value 0
+
+execute if entity @p[scores={trade=-2}] as @a[scores={trade=-2}] run scoreboard players set @s barter 2
+
+execute if entity @p[scores={trade=-2}] as @a[scores={trade=-2}] run function rx.playerdb:api/save_self
+#
+
+#
+execute if entity @p[scores={trade=-1}] as @a[scores={trade=-1}] run function rx.playerdb:api/get_self
+
+execute if entity @p[scores={trade=-1}] as @a[scores={trade=-1}] store result score @s trade run data get storage rx:io playerdb.player.data.centural.core.barter.trade 1
+#
 
 #
 execute if entity @p[scores={trade=2..}] as @p[scores={trade=2..}] at @s as @a[distance=0.1..] if score @s unique = @p[scores={trade=2..}] trade run tag @p[scores={trade=2..}] add trade_barter
