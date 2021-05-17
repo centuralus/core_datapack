@@ -21,8 +21,8 @@ execute if entity @p[tag=trade_barter] as @p[tag=trade_barter] as @p[tag=receive
 
 execute if entity @p[tag=trade_barter,tag=accept_trade] if entity @p[tag=receive_barter,tag=accept_trade] as @p[tag=receive_barter] run tellraw @s {"text":"Test: Accepting trade..."}
 execute if entity @p[tag=trade_barter,tag=accept_trade] if entity @p[tag=receive_barter,tag=accept_trade] as @p[tag=trade_barter] run tellraw @s {"text":"Test: Accepting trade..."}
-execute if entity @p[tag=accept_trade] as @a[tag=accept_trade] run scoreboard players set @s trade -1
-execute if entity @p[tag=accept_trade] as @a[tag=accept_trade] run scoreboard players set @s trade -1
+execute if entity @p[tag=trade_barter,tag=accept_trade] if entity @p[tag=receive_barter,tag=accept_trade] as @p[tag=receive_barter] run tag @s add reset_trade
+execute if entity @p[tag=trade_barter,tag=accept_trade] if entity @p[tag=receive_barter,tag=accept_trade] as @p[tag=trade_barter] run tag @s add reset_trade
 
 #cstore result storage rx:io playerdb.player.data.centural.core.barter.trade int 1 run scoreboard players get @p[tag=trade_barter] rx.uuid
 execute if entity @p[tag=trade_barter] as @p[tag=trade_barter] run function rx.playerdb:api/get_self
@@ -40,6 +40,6 @@ execute if entity @p[scores={trade=..-1}] as @a[scores={trade=..-1}] run tag @s 
 
 #
 execute if entity @p[tag=reset_trade] as @a[tag=reset_trade] run scoreboard players reset @s trade
-execute if entity @p[tag=reset_trade] as @a[tag=reset_trade] run scoreboard players enable @s trade
+#execute if entity @p[tag=reset_trade] as @a[tag=reset_trade] run scoreboard players enable @s trade
 execute if entity @p[tag=reset_trade] as @a[tag=reset_trade] run tag @s remove reset_trade
 #
