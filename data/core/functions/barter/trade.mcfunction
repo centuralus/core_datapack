@@ -17,8 +17,8 @@ execute if entity @p[scores={trade=2..}] as @p[scores={trade=2..}] at @s as @a[d
 
 execute if entity @p[tag=trade_barter] as @p[tag=trade_barter] run function rx.playerdb:api/get_self
 execute if entity @p[tag=trade_barter] as @p[tag=trade_barter] run tellraw @p[tag=receive_barter] [{"selector":"@s"},{"text":" would like to trade ","color":"yellow"},{"nbt":"playerdb.player.data.centural.core.barter.offer","storage":"rx:io"}]
-execute if entity @p[tag=trade_barter] as @p[tag=trade_barter] as @p[tag=receive_offer] run function rx.playerdb:api/get_self
-execute if entity @p[tag=trade_barter] as @p[tag=trade_barter] as @p[tag=receive_offer] run tellraw @s [{"text":"For your ","color":"yellow"},{"nbt":"playerdb.player.data.centural.core.barter.offer","storage":"rx:io"}]
+execute if entity @p[tag=trade_barter] as @p[tag=trade_barter] as @p[tag=receive_barter] run function rx.playerdb:api/get_self
+execute if entity @p[tag=trade_barter] as @p[tag=trade_barter] as @p[tag=receive_barter] run tellraw @s [{"text":"For your ","color":"yellow"},{"nbt":"playerdb.player.data.centural.core.barter.offer","storage":"rx:io"}]
 
 
 execute if entity @p[tag=trade_barter] as @p[tag=trade_barter] run tag @s remove trade_barter
