@@ -53,8 +53,11 @@ execute if entity @p[tag=trade_barter,tag=accept_barter] if entity @p[tag=receiv
 execute if entity @p[tag=trade_barter,tag=accept_barter] if entity @p[tag=receive_barter,tag=accept_barter] as @p[tag=trade_barter] at @s run kill @e[tag=trade,distance=..1,limit=1,type=armor_stand]
 #
 
-execute if entity @p[tag=trade_barter,tag=accept_barter] if entity @p[tag=receive_barter,tag=accept_barter] as @p[tag=receive_barter] run tag @s add reset_trade
-execute if entity @p[tag=trade_barter,tag=accept_barter] if entity @p[tag=receive_barter,tag=accept_barter] as @p[tag=trade_barter] run tag @s add reset_trade
+execute if entity @p[tag=trade_barter,tag=accept_barter] if entity @p[tag=receive_barter,tag=accept_barter] as @p[tag=receive_barter,tag=accept_barter] run tag @s add reset_trade
+execute if entity @p[tag=trade_barter,tag=accept_barter] if entity @p[tag=receive_barter,tag=accept_barter] as @p[tag=trade_barter,tag=accept_barter] run tag @s add reset_trade
+execute if entity @p[tag=trade_barter,tag=accept_barter,tag=reset_trade] as @p[tag=trade_barter,tag=accept_barter,tag=reset_trade] run tag @s remove trade_barter
+execute if entity @p[tag=receive_barter,tag=accept_barter,tag=reset_trade] as @p[tag=receive_barter,tag=accept_barter,tag=reset_trade] run tag @s remove trade_barter
+
 
 #cstore result storage rx:io playerdb.player.data.centural.core.barter.trade int 1 run scoreboard players get @p[tag=trade_barter] rx.uuid
 execute if entity @p[tag=trade_barter] as @p[tag=trade_barter] run function rx.playerdb:api/get_self
