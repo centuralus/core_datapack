@@ -3,6 +3,12 @@ execute as @a unless entity @s[scores={trade=-2147483648..2147483647}] run score
 execute if entity @p[scores={trade=1..}] as @a[scores={trade=1..}] run tag @s add reset_trade
 execute if entity @p[scores={trade=..-1}] as @a[scores={trade=..-1}] run tag @s add reset_trade
 
+
+#
+execute if entity @p[scores={trade=-3}] as @p[scores={trade=-3}] run function core:barter/accept
+
+#
+
 #
 execute if entity @p[scores={trade=-2}] as @a[scores={trade=-2}] run function rx.playerdb:api/get_self
 
