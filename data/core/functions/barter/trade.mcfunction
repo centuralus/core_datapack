@@ -33,7 +33,8 @@ execute if entity @p[tag=trade_barter] as @p[tag=trade_barter] as @p[tag=receive
 execute if entity @p[tag=accept_barter] as @a[tag=accept_barter] run tag @s remove accept_trade
 execute if entity @p[tag=trade_barter] as @a[tag=trade_barter] run tag @s remove trade_barter
 execute if entity @p[tag=receive_barter] as @a[tag=receive_barter] run tag @s remove receive_barter
-execute if entity @p[scores={trade=2..}] as @p[scores={trade=2..}] run tag @s add reset_trade
+execute if entity @p[scores={trade=2..}] as @a[scores={trade=2..}] run tag @s add reset_trade
+execute if entity @p[scores={trade=..-1}] as @a[scores={trade=..-1}] run tag @s add reset_trade
 
 
 #
