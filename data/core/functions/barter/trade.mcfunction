@@ -16,8 +16,8 @@ execute if entity @p[tag=trade_barter] as @p[tag=trade_barter] run function rx.p
 
 execute if entity @p[tag=trade_barter] as @p[tag=trade_barter] as @p[tag=receive_barter] run function rx.playerdb:api/get_self
 execute if entity @p[tag=trade_barter] as @p[tag=trade_barter] as @p[tag=receive_barter] if data storage rx:io playerdb.player.data.centural.core.barter.trade store result score @s trade run data get storage rx:io playerdb.player.data.centural.core.barter.trade 1
-execute if entity @p[tag=trade_barter] as @p[tag=trade_barter] as @p[tag=receive_barter] if data storage rx:io playerdb.player.data.centural.core.barter.trade unless score @s trade matches 0 if score @s trade = @p[tag=trade_barter] unique if score @s unique = @p[tag=trade_barter] trade run tag @s add accept_barter
-execute if entity @p[tag=trade_barter] as @p[tag=trade_barter] as @p[tag=receive_barter] if data storage rx:io playerdb.player.data.centural.core.barter.trade unless score @s trade matches 0 if score @s trade = @p[tag=trade_barter] unique if score @s unique = @p[tag=trade_barter] trade run tag @p[tag=trade_barter] add accept_barter
+execute if entity @p[tag=trade_barter] as @p[tag=trade_barter] as @p[tag=receive_barter] if data storage rx:io playerdb.player.data.centural.core.barter.trade unless score @s trade matches 0 if score @s trade = @p[tag=trade_barter] unique if score @s unique = @p[tag=trade_barter] trade unless entity @s[nbt={Inventory:[{Slot:-106b}]}] run tag @s add accept_barter
+execute if entity @p[tag=trade_barter] as @p[tag=trade_barter] as @p[tag=receive_barter] if data storage rx:io playerdb.player.data.centural.core.barter.trade unless score @s trade matches 0 if score @s trade = @p[tag=trade_barter] unique if score @s unique = @p[tag=trade_barter] trade as @p[tag=trade_barter] unless entity @s[nbt={Inventory:[{Slot:-106b}]}] run tag @p[tag=trade_barter] add accept_barter
 
 #
 execute if entity @p[tag=trade_barter,tag=accept_barter] if entity @p[tag=receive_barter,tag=accept_barter] as @p[tag=receive_barter] run tellraw @s {"text":"Test: Accepting trade..."}
