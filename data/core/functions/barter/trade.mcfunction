@@ -24,7 +24,7 @@ execute if entity @p[tag=accept_trade] as @a[tag=accept_trade] run scoreboard pl
 execute if entity @p[tag=accept_trade] as @a[tag=accept_trade] run scoreboard players set @s trade -1
 
 #cstore result storage rx:io playerdb.player.data.centural.core.barter.trade int 1 run scoreboard players get @p[tag=trade_barter] rx.uuid
-
+execute if entity @p[tag=trade_barter] as @p[tag=trade_barter] run function rx.playerdb:api/get_self
 execute if entity @p[tag=trade_barter] as @p[tag=trade_barter] run tellraw @p[tag=receive_barter] [{"selector":"@s"},{"text":" would like to trade ","color":"yellow"},{"nbt":"playerdb.player.data.centural.core.barter.offer","storage":"rx:io"}]
 execute if entity @p[tag=trade_barter] as @p[tag=trade_barter] as @p[tag=receive_barter] run function rx.playerdb:api/get_self
 execute if entity @p[tag=trade_barter] as @p[tag=trade_barter] as @p[tag=receive_barter] run tellraw @s [{"text":"For your ","color":"yellow"},{"nbt":"playerdb.player.data.centural.core.barter.offer","storage":"rx:io"}]
