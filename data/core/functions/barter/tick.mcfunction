@@ -7,11 +7,15 @@ execute if entity @p[scores={barter=..-1}] as @a[scores={barter=..-1}] run tag @
 #
 execute if entity @p[scores={barter=2}] as @a[scores={barter=2}] run tag @s add claim_barter
 execute if entity @p[scores={barter=3}] as @a[scores={barter=3}] run tag @s add offer_barter
+execute if entity @p[scores={barter=4}] as @a[scores={barter=4}] run tag @s add view_barter
+execute if entity @p[scores={barter=5}] as @a[scores={barter=5}] run tag @s add view_all_barter
 #
 
 #
 execute if entity @p[tag=claim_barter] as @a[tag=claim_barter] run function core:barter/claim
 execute if entity @p[tag=offer_barter] as @a[tag=offer_barter] run function core:barter/offer
+execute if entity @p[tag=view_barter] as @a[tag=view_barter] run function core:barter/view
+execute if entity @p[tag=view_all_barter] as @a[tag=view_all_barter] run function core:barter/view_all
 #
 
 #
