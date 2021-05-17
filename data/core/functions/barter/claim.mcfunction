@@ -1,3 +1,5 @@
+execute at @s as @a[distance=0.1..] run function core:barter/claim_reset
+
 function rx.playerdb:api/get_self
 execute store result score @s barter run data get storage rx:io playerdb.player.data.centural.core.barter.offer
 execute if entity @s[scores={barter=0}] run tellraw @s {"text":"There is no active offer to claim","color":"yellow"}
