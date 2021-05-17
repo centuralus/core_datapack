@@ -12,13 +12,13 @@ execute if entity @p[scores={trade_timer=..0}] as @a[scores={trade_timer=..0}] u
 execute if entity @p[scores={trade=2..}] as @p[scores={trade=2..}] unless entity @s[scores={trade_timer=0..}] run scoreboard objectives add trade_timer minecraft.custom:minecraft.play_time
 #
 
-execute if entity @p[scores={trade=2..}] as @p[scores={trade=2..}] at @s as @a[distance=0.1..] if score @s trade = @p[scores={trade=2..}] trade run tag @p[scores={trade=2..}] add trade_barter
+execute if entity @p[scores={trade=2..}] as @p[scores={trade=2..}] at @s as @a[distance=0.1..] if score @s unique = @p[scores={trade=2..}] trade run tag @p[scores={trade=2..}] add trade_barter
 execute if entity @p[tag=trade_barter] as @p[tag=trade_barter] run function rx.playerdb:api/get_self
 execute if entity @p[tag=trade_barter] as @p[tag=trade_barter] run tellraw @p[tag=receive_barter] [{"selector":"@s"},{"text":" would like to trade ","color":"yellow"},{"nbt":"playerdb.player.data.centural.core.barter.offer","storage":"rx:io"}]
 execute if entity @p[tag=trade_barter] as @p[tag=trade_barter] as @p[tag=receive_offer] run function rx.playerdb:api/get_self
 execute if entity @p[tag=trade_barter] as @p[tag=trade_barter] as @p[tag=receive_offer] run tellraw @s [{"text":"For your ","color":"yellow"},{"nbt":"playerdb.player.data.centural.core.barter.offer","storage":"rx:io"}]
 
-execute if entity @p[scores={trade=2..}] as @p[scores={trade=2..}] at @s as @a[distance=0.1..] if score @s trade = @p[scores={trade=2..}] trade run tag @s add receive_barter
+execute if entity @p[scores={trade=2..}] as @p[scores={trade=2..}] at @s as @a[distance=0.1..] if score @s unique = @p[scores={trade=2..}] trade run tag @s add receive_barter
 
 
 execute if entity @p[tag=trade_barter] as @p[tag=trade_barter] run tag @s remove trade_barter
