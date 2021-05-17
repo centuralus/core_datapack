@@ -16,10 +16,11 @@ execute if entity @p[tag=trade_barter] as @p[tag=trade_barter] run function rx.p
 
 execute if entity @p[tag=trade_barter] as @p[tag=trade_barter] as @p[tag=receive_barter] run function rx.playerdb:api/get_self
 execute if entity @p[tag=trade_barter] as @p[tag=trade_barter] as @p[tag=receive_barter] if data storage rx:io playerdb.player.data.centural.core.barter.trade store result score @s trade run data get storage rx:io playerdb.player.data.centural.core.barter.trade 1
-execute if entity @p[tag=trade_barter] as @p[tag=trade_barter] as @p[tag=receive_barter] if data storage rx:io playerdb.player.data.centural.core.barter.trade if score @s trade = @p[tag=trade_barter] trade run tag @s add accept_trade
-execute if entity @p[tag=trade_barter] as @p[tag=trade_barter] as @p[tag=receive_barter] if data storage rx:io playerdb.player.data.centural.core.barter.trade if score @s trade = @p[tag=trade_barter] trade run tag @p[tag=trade_barter] add accept_trade
+execute if entity @p[tag=trade_barter] as @p[tag=trade_barter] as @p[tag=receive_barter] if data storage rx:io playerdb.player.data.centural.core.barter.trade if score @s trade = @p[tag=trade_barter] unique run tag @s add accept_trade
+execute if entity @p[tag=trade_barter] as @p[tag=trade_barter] as @p[tag=receive_barter] if data storage rx:io playerdb.player.data.centural.core.barter.trade if score @s unique = @p[tag=trade_barter] trade run tag @p[tag=trade_barter] add accept_trade
 
-execute if entity @p[tag=accept_trade] as @a[tag=accept_trade] run tellraw @s {"text":"Test: Accepting trade"}
+execute if entity @p[tag=trade_barter,tag=accept_trade] if entity @p[tag=receive_barter,tag=accept_trade] as @p[tag=receive_barter] run tellraw @s {"text":"Test: Accepting trade..."}
+execute if entity @p[tag=trade_barter,tag=accept_trade] if entity @p[tag=receive_barter,tag=accept_trade] as @p[tag=trade_barter] run tellraw @s {"text":"Test: Accepting trade..."}
 execute if entity @p[tag=accept_trade] as @a[tag=accept_trade] run scoreboard players set @s trade -1
 execute if entity @p[tag=accept_trade] as @a[tag=accept_trade] run scoreboard players set @s trade -1
 
