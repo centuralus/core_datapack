@@ -5,8 +5,7 @@ execute if entity @p[scores={trade=..-1}] as @a[scores={trade=..-1}] run tag @s 
 
 
 #
-execute if entity @p[scores={trade=-3}] as @p[scores={trade=-3}] run function core:barter/accept
-
+execute if entity @p[scores={trade=-3}] as @p[scores={trade=-3}] at @s as @a[distance=1..] run function core:barter/accept_loop
 #
 
 #
