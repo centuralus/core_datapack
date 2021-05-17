@@ -22,7 +22,7 @@ execute if entity @p[tag=trade_barter] as @p[tag=trade_barter] as @p[tag=receive
 execute if entity @p[tag=trade_barter] as @p[tag=trade_barter] as @p[tag=receive_barter] if data storage rx:io playerdb.player.data.centural.core.barter.trade unless score @s trade matches 0 if score @s trade = @p[tag=trade_barter] unique if score @s unique = @p[tag=trade_barter] trade as @p[tag=trade_barter] if entity @s[nbt={Inventory:[{Slot:-106b}]}] run tellraw @s {"text":"You must remove what is in your off hand then try again. (Re-click trade from view_all menu)","color":"yellow"}
 
 #
-execute if entity @p[tag=trade_barter,tag=accept_barter] if entity @p[tag=receive_barter,tag=accept_barter] as @p[tag=receive_barter] run tellraw @s {"text":"Test: Accepting trade..."}
+execute if entity @p[tag=trade_barter,tag=accept_barter] if entity @p[tag=receive_barter,tag=accept_barter] as @p[tag=receive_barter] run tellraw @s {"text":"Accepting trade...","color":"#f2d432"}
 execute if entity @p[tag=trade_barter,tag=accept_barter] if entity @p[tag=receive_barter,tag=accept_barter] as @p[tag=trade_barter] run function rx.playerdb:api/get_self
 execute if entity @p[tag=trade_barter,tag=accept_barter] if entity @p[tag=receive_barter,tag=accept_barter] as @p[tag=receive_barter] at @s run summon minecraft:armor_stand ~ ~ ~ {Tags:["receive"],Invisible:1b,Invulnerable:1b,Marker:1b}
 execute if entity @p[tag=trade_barter,tag=accept_barter] if entity @p[tag=receive_barter,tag=accept_barter] as @p[tag=receive_barter] at @s run data modify entity @e[tag=receive,distance=..1,limit=1,type=minecraft:armor_stand] HandItems[1] set from storage rx:io playerdb.player.data.centural.core.barter.offer
@@ -32,7 +32,7 @@ execute if entity @p[tag=trade_barter,tag=accept_barter] if entity @p[tag=receiv
 #
 
 #
-execute if entity @p[tag=trade_barter,tag=accept_barter] if entity @p[tag=receive_barter,tag=accept_barter] as @p[tag=trade_barter] run tellraw @s {"text":"Test: Accepting trade..."}
+execute if entity @p[tag=trade_barter,tag=accept_barter] if entity @p[tag=receive_barter,tag=accept_barter] as @p[tag=trade_barter] run tellraw @s {"text":"Accepting trade...","color":"#f2d432"}
 execute if entity @p[tag=trade_barter,tag=accept_barter] if entity @p[tag=receive_barter,tag=accept_barter] as @p[tag=receive_barter] run function rx.playerdb:api/get_self
 execute if entity @p[tag=trade_barter,tag=accept_barter] if entity @p[tag=receive_barter,tag=accept_barter] as @p[tag=trade_barter] at @s run summon minecraft:armor_stand ~ ~ ~ {Tags:["trade"],Invisible:1b,Invulnerable:1b,Marker:1b}
 execute if entity @p[tag=trade_barter,tag=accept_barter] if entity @p[tag=receive_barter,tag=accept_barter] as @p[tag=trade_barter] at @s run data modify entity @e[tag=trade,distance=..1,limit=1,type=minecraft:armor_stand] HandItems[1] set from storage rx:io playerdb.player.data.centural.core.barter.offer
