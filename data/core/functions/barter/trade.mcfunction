@@ -27,6 +27,8 @@ execute if entity @p[tag=trade_barter,tag=accept_barter] if entity @p[tag=receiv
 
 execute if entity @p[tag=trade_barter,tag=accept_barter] if entity @p[tag=receive_barter,tag=accept_barter] as @p[tag=trade_barter] at @s run data modify storage rx:io playerdb.player.data.centural.core.barter set value {}
 execute if entity @p[tag=trade_barter,tag=accept_barter] if entity @p[tag=receive_barter,tag=accept_barter] as @p[tag=trade_barter] at @s run item replace entity @s weapon.offhand from entity @e[tag=trade,type=minecraft:armor_stand,distance=..1,limit=1] weapon.offhand
+
+execute if entity @p[tag=trade_barter,tag=accept_barter] if entity @p[tag=receive_barter,tag=accept_barter] as @p[tag=trade_barter] run function rx.playerdb:api/save_self
 #
 
 #
@@ -37,6 +39,8 @@ execute if entity @p[tag=trade_barter,tag=accept_barter] if entity @p[tag=receiv
 
 execute if entity @p[tag=trade_barter,tag=accept_barter] if entity @p[tag=receive_barter,tag=accept_barter] as @p[tag=receive_barter] at @s run data modify storage rx:io playerdb.player.data.centural.core.barter set value {}
 execute if entity @p[tag=trade_barter,tag=accept_barter] if entity @p[tag=receive_barter,tag=accept_barter] as @p[tag=receive_barter] at @s run item replace entity @s weapon.offhand from entity @e[tag=receive,type=minecraft:armor_stand,distance=..1,limit=1] weapon.offhand
+
+execute if entity @p[tag=trade_barter,tag=accept_barter] if entity @p[tag=receive_barter,tag=accept_barter] as @p[tag=receive_barter] run function rx.playerdb:api/save_self
 #
 
 #
