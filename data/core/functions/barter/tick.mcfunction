@@ -19,6 +19,10 @@ execute if entity @p[tag=view_all_barter] as @a[tag=view_all_barter] run functio
 #
 
 #
+function core:barter/trade
+#
+
+#
 execute if entity @e[tag=claim,type=armor_stand] as @e[tag=claim,type=armor_stand] at @s unless entity @p[distance=..1] run kill @s[type=armor_stand]
 #execute if entity @e[tag=offer,type=armor_stand] as @e[tag=offer,type=armor_stand] at @s unless entity @p[distance=..1] run kill @s[type=armor_stand]
 #
