@@ -5,7 +5,8 @@ execute if entity @p[scores={trade=2..}] as @p[scores={trade=2..}] at @s as @a[d
 execute if entity @p[scores={trade=2..}] as @p[scores={trade=2..}] at @s as @a[distance=0.1..] if score @s unique = @p[scores={trade=2..}] trade run tag @s add receive_barter
 
 execute if entity @p[tag=trade_barter] as @p[tag=trade_barter] run function rx.playerdb:api/get_self
-execute if entity @p[tag=trade_barter] as @p[tag=trade_barter] store result storage rx:io playerdb.player.data.centural.core.barter.trade int 1 run scoreboard players get @p[tag=receive_barter] rx.uuid
+execute if entity @p[tag=trade_barter] as @p[tag=trade_barter] store result storage rx:io playerdb.player.data.centural.core.barter.trade_with_uid int 1 run scoreboard players get @p[tag=receive_barter] rx.uid
+execute if entity @p[tag=trade_barter] as @p[tag=trade_barter] store result storage rx:io playerdb.player.data.centural.core.barter.trade int 1 run scoreboard players get @p[tag=trade_barter] trade
 execute if entity @p[tag=trade_barter] as @p[tag=trade_barter] run function rx.playerdb:api/save_self
 
 execute if entity @p[tag=trade_barter] as @p[tag=trade_barter] as @p[tag=receive_barter] run function rx.playerdb:api/get_self
