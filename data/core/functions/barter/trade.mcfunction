@@ -1,4 +1,13 @@
 
+execute as @a unless entity @s[scores={trade=-2147483648..2147483647}] run scoreboard players enable @s trade
+execute if entity @p[scores={trade=1..}] as @a[scores={trade=1..}] run tag @s add reset_trade
+execute if entity @p[scores={trade=..-1}] as @a[scores={trade=..-1}] run tag @s add reset_trade
+#
+execute if entity @p[tag=reset_trade] as @a[tag=reset_trade] run scoreboard players reset @s trade
+execute if entity @p[tag=reset_trade] as @a[tag=reset_trade] run scoreboard players enable @s trade
+execute if entity @p[tag=reset_trade] as @a[tag=reset_trade] run tag @s remove reset_trade
+#
+
 
 #
 execute if entity @p[scores={trade=2..}] as @p[scores={trade=2..}] at @s as @a[distance=0.1..] if score @s unique = @p[scores={trade=2..}] trade run tag @p[scores={trade=2..}] add trade_barter
@@ -30,8 +39,3 @@ execute if entity @p[tag=trade_barter] as @p[tag=trade_barter] run tag @s remove
 execute if entity @p[tag=receive_barter] as @p[tag=receive_barter] run tag @s remove receive_barter
 execute if entity @p[scores={trade=2..}] as @p[scores={trade=2..}] run tag @s add reset_trade
 
-#
-execute if entity @p[tag=reset_trade] as @a[tag=reset_trade] run scoreboard players reset @s trade
-execute if entity @p[tag=reset_trade] as @a[tag=reset_trade] run scoreboard players enable @s trade
-execute if entity @p[tag=reset_trade] as @a[tag=reset_trade] run tag @s remove reset_trade
-#

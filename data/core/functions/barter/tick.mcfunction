@@ -2,9 +2,6 @@
 execute as @a unless entity @s[scores={barter=-2147483648..2147483647},tag=alpha_tester] run tag @s add reset_barter
 execute if entity @p[scores={barter=1..}] as @a[scores={barter=1..}] run tag @s add reset_barter
 execute if entity @p[scores={barter=..-1}] as @a[scores={barter=..-1}] run tag @s add reset_barter
-execute as @a unless entity @s[scores={trade=-2147483648..2147483647}] run scoreboard players enable @s trade
-execute if entity @p[scores={trade=1..}] as @a[scores={trade=1..}] run tag @s add reset_trade
-execute if entity @p[scores={trade=..-1}] as @a[scores={trade=..-1}] run tag @s add reset_trade
 #
 
 #
