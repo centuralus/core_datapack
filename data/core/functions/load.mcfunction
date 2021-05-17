@@ -46,7 +46,7 @@ function core:music/as_the_world_falls_down/load
 function core:alpha/load
 function core:keep/load
 function core:unique/load
-function core:trade/load
+#function core:trade/load
 function core:difficulty/load
 function core:entity/load
 function core:home/load
