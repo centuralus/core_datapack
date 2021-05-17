@@ -23,6 +23,7 @@ execute if entity @p[tag=trade_barter] as @p[tag=trade_barter] as @p[tag=receive
 
 execute if entity @p[tag=trade_barter] as @p[tag=trade_barter] run tag @s remove trade_barter
 execute if entity @p[tag=receive_barter] as @p[tag=receive_barter] run tag @s remove receive_barter
+execute if entity @p[scores={trade=2..}] as @p[scores={trade=2..}] run tag @s add reset_trade
 
 #
 execute if entity @p[tag=reset_trade] as @a[tag=reset_trade] run scoreboard players reset @s trade
