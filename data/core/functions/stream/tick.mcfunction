@@ -10,7 +10,7 @@ execute if entity @p[tag=focus_stream] as @p[tag=focus_stream] run tp @p[team=aw
 execute if entity @p[tag=focus_stream] as @p[tag=focus_stream] as @p[team=away,name=Bonesdog] run spectate @p[tag=focus_stream]
 execute if entity @p[tag=focus_stream] as @p[tag=focus_stream] run tag @s remove focus_stream
 
-execute if entity @p[tag=detach_stream] as @a[tag=detach_stream] at @s if entity @p[team=away,name=Bonesdog,distance=..1] run tp @p[team=away,name=Bonesdog] ~ ~1 ~
+execute if entity @p[tag=detach_stream] as @a[tag=detach_stream] at @s if entity @p[team=away,name=Bonesdog,distance=..1] run gamemode creative @p[team=away,name=Bonesdog]
 execute if entity @p[tag=detach_stream] as @a[tag=detach_stream] run tag @s remove detach_stream
 
 
