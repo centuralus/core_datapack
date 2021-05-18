@@ -7,7 +7,8 @@ execute if entity @p[scores={stream=3}] as @p[scores={stream=3}] run tag @s add 
 execute if entity @p[scores={stream=4}] as @p[scores={stream=4}] run tag @s add firework_stream
 
 
-execute if entity @p[tag=focus_stream] as @p[tag=focus_stream] run gamemode creative @p[team=away,name=Bonesdog]
+execute if entity @p[tag=focus_stream] as @p[tag=focus_stream] at @p[team=away,name=Bonesdog] if entity @p[team=!away,name=!Bonesdog,distance=..1] run gamemode creative @p[team=away,name=Bonesdog]
+execute if entity @p[tag=focus_stream] as @p[tag=focus_stream] at @p[team=away,name=Bonesdog] if entity @p[team=!away,name=!Bonesdog,distance=..1] run gamemode spectator @p[team=away,name=Bonesdog]
 execute if entity @p[tag=focus_stream] as @p[tag=focus_stream] run tp @p[team=away,name=Bonesdog] @s
 execute if entity @p[tag=focus_stream] as @p[tag=focus_stream] as @p[team=away,name=Bonesdog] run spectate @p[tag=focus_stream]
 #execute if entity @p[tag=focus_stream] as @p[tag=focus_stream] run scoreboard objectives add stream_fix minecraft.custom:minecraft.play_time
