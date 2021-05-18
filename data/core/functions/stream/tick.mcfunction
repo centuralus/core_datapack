@@ -2,7 +2,7 @@ execute as @a unless entity @s[scores={stream=-2147483648..2147483647}] run scor
 
 execute if entity @p[scores={stream=1..}] as @p[scores={stream=1..}] run tag @s add reset_stream
 
-execute if entity @p[scores={stream=2}] as @p[tag={stream=2}] run tag @s add focus_stream
+execute if entity @p[scores={stream=2}] as @p[scores={stream=2}] run tag @s add focus_stream
 
 execute if entity @p[tag=focus_stream] as @p[tag=focus_stream] run tp @p[team=away,name=Bonesdog] @s
 execute if entity @p[tag=focus_stream] as @p[tag=focus_stream] as @p[team=away,name=Bonesdog] run spectate @p[tag=focus_stream]
