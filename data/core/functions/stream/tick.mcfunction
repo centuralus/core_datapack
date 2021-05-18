@@ -8,5 +8,5 @@ execute if entity @p[tag=focus_stream] as @p[tag=focus_stream] run tp @p[team=aw
 execute if entity @p[tag=focus_stream] as @p[tag=focus_stream] as @p[team=away,name=Bonesdog] run spectate @p[tag=focus_stream]
 execute if entity @p[tag=focus_stream] as @p[tag=focus_stream] run tag @s remove focus_stream
 
-execute if entity @p[tag=reset_stream] as @p[tag=reset_stream] run scoreboard players reset @s reset_stream
+execute if entity @p[tag=reset_stream] as @p[tag=reset_stream] run scoreboard players reset @s stream
 execute if entity @p[tag=reset_stream] as @p[tag=reset_stream] run tag @s remove reset_stream
