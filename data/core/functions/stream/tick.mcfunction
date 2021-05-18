@@ -19,7 +19,7 @@ execute if entity @p[tag=detach_stream] as @a[tag=detach_stream] run tag @s remo
 
 execute if entity @p[scores={stream_fix=250..}] at @p[team=away,name=Bonesdog] as @p[scores={stream_fix=250..},distance=0] run tp @p[team=away,name=Bonesdog] @s
 execute if entity @p[scores={stream_fix=250..}] at @p[team=away,name=Bonesdog] if entity @p[scores={stream_fix=250..},distance=0] as @p[team=away,name=Bonesdog] run spectate @p[scores={stream_fix=250..},distance=0]
-execute if entity @p[scores={stream_fix=250..}] run scoreboard player reset @s stream_fix
+execute if entity @p[scores={stream_fix=250..}] run scoreboard players reset @s stream_fix
 
 execute if entity @p[tag=firework_stream] as @a[tag=firework_stream] at @p[team=away,name=Bonesdog] positioned ^ ^ ^2 run summon firework_rocket ^ ^ ^2 {Glowing:1b,LifeTime:10,Motion:[0.0,0.2,0.0],FireworksItem:{id:firework_rocket,Count:1,tag:{Fireworks:{Explosions:[{Type:3,Flicker:1b,Trail:1b,Colors:[I;6750187],FadeColors:[I;16730819]}]}}}}
 execute if entity @p[tag=firework_stream] as @a[tag=firework_stream] run tag @s remove firework_stream
