@@ -1,6 +1,6 @@
 execute as @a unless entity @s[scores={stream=-2147483648..2147483647}] run scoreboard players enable @s stream
 
-execute if entity @p[scores={stream=1..}] as @p[tag={stream=1..}] run tag @s add reset_stream
+execute if entity @p[scores={stream=1..}] as @p[scores={stream=1..}] run tag @s add reset_stream
 
 execute if entity @p[scores={stream=2}] as @p[tag={stream=2}] run tag @s add focus_stream
 
