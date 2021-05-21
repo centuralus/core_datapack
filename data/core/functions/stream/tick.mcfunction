@@ -5,6 +5,8 @@ execute if entity @p[scores={stream=1..}] as @p[scores={stream=1..}] run tag @s 
 execute if entity @p[scores={stream=2}] as @p[scores={stream=2}] run tag @s add focus_stream
 execute if entity @p[scores={stream=3}] as @p[scores={stream=3}] run tag @s add detach_stream
 execute if entity @p[scores={stream=4}] as @p[scores={stream=4}] run tag @s add firework_stream
+execute if entity @p[scores={stream=5}] as @p[scores={stream=5}] run tag @s add block_stream
+execute if entity @p[scores={stream=6}] as @p[scores={stream=6}] run tag @s remove block_stream
 
 
 execute if entity @p[tag=focus_stream] as @p[tag=focus_stream] at @p[team=away,name=Bonesdog] if entity @p[team=!away,name=!Bonesdog,distance=..1] run gamemode creative @p[team=away,name=Bonesdog]
