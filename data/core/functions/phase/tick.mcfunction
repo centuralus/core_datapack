@@ -11,7 +11,7 @@ execute if entity @p[tag=phase,scores={phase_timer=..1}] as @a[tag=phase,scores=
 execute if entity @p[tag=phase,scores={phase_timer=..1}] as @a[tag=phase,scores={phase_timer=..1}] run gamemode spectator @s
 execute if entity @p[tag=phase,scores={phase_timer=..1}] as @a[tag=phase,scores={phase_timer=..1}] at @s run particle minecraft:poof ~ ~ ~ 0 1 0 0 20 force @a[distance=..32]
 execute if entity @p[tag=phase,scores={phase_timer=..1}] as @a[tag=phase,scores={phase_timer=..1}] run scoreboard players set @s phase_timer 2
-execute if entity @p[tag=phase] as @a[tag=!phase,scores={phase_timer=..1}] run scoreboard players set @s phase_timer -214748364
+execute if entity @p[tag=phase] as @a[tag=!phase,scores={phase_timer=-1..1}] run scoreboard players set @s phase_timer -214748364
 execute if entity @p[tag=phase,scores={phase_timer=10..}] as @a[tag=phase,scores={phase_timer=10..}] run gamemode survival @s
 execute if entity @p[tag=phase,scores={phase_timer=10..}] as @a[tag=phase,scores={phase_timer=10..}] run tag @s remove phase
 
