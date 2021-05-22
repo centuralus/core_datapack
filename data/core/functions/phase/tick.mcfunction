@@ -19,3 +19,4 @@ execute unless entity @p[tag=phase] if entity @p[scores={phase_timer=-2147483648
 execute unless entity @p[tag=phase] if entity @p[scores={phase_timer=-2147483648..2147483647}] run scoreboard objectives remove phase_timer
 
 execute if entity @p[tag=reset_phase] as @a[tag=reset_phase] run scoreboard players reset @s phase
+execute if entity @p[tag=reset_phase] as @a[tag=reset_phase] run tag @s remove reset_phase
