@@ -7,8 +7,8 @@ execute if entity @p[scores={phase=1}] as @a[scores={phase=1}] run tag @s add ph
 
 
 execute if entity @p[tag=phase] as @a[tag=phase] unless entity @s[scores={phase_timer=-2147483648..2147483647}] run scoreboard objectives add phase_timer minecraft.custom:minecraft.play_time
-execute if entity @p[tag=phase,scores={phase_timer=..1}] as @a[tag=phase,scores={phase_timer=..1}] run gamemode spectator @s
 execute if entity @p[tag=phase,scores={phase_timer=..1}] as @a[tag=phase,scores={phase_timer=..1}] run gamerule spectatorsGenerateChunks false
+execute if entity @p[tag=phase,scores={phase_timer=..1}] as @a[tag=phase,scores={phase_timer=..1}] run gamemode spectator @s
 execute if entity @p[tag=phase,scores={phase_timer=..1}] as @a[tag=phase,scores={phase_timer=..1}] run scoreboard players set @s phase_timer 2
 execute if entity @p[tag=phase] as @a[tag=!phase,scores={phase_timer=..1}] run scoreboard players set @s phase_timer -214748364
 execute if entity @p[tag=phase,scores={phase_timer=10..}] as @a[tag=phase,scores={phase_timer=10..}] run gamemode survival @s
