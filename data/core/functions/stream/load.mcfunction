@@ -7,6 +7,8 @@ scoreboard objectives add follow_y dummy
 scoreboard objectives add follow_z dummy
 
 tag Bonesdog add camera
+scoreboard objectives remove camera_timer
+scoreboard objectives add camera_timer minecraft.custom:minecraft.play_time
 execute unless entity @e[type=minecraft:area_effect_cloud,tag=camera_hub] at @p[tag=camera] run summon area_effect_cloud ~ ~0.225 ~ {Age:-2147483648,Duration:-1,WaitTime:-2147483648,Tags:["camera_hub"]}
 
 summon minecraft:area_effect_cloud
