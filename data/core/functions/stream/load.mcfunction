@@ -7,4 +7,6 @@ scoreboard objectives add follow_y dummy
 scoreboard objectives add follow_z dummy
 
 tag Bonesdog add camera
-execute unless entity @e[type=minecraft:armor_stand,tag=camera_hub] at @p[tag=camera] run summon minecraft:armor_stand ~ ~ ~ {Tags:["camera_hub"],Invisible:1b,Marker:1b,Invulnerable:1b}
+execute unless entity @e[type=minecraft:area_effect_cloud,tag=camera_hub] at @p[tag=camera] run summon area_effect_cloud ~ ~0.225 ~ {Age:-2147483648,Duration:-1,WaitTime:-2147483648,Tags:["camera_hub"]}
+
+summon minecraft:area_effect_cloud
