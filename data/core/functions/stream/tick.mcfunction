@@ -39,7 +39,7 @@ execute if entity @p[tag=camera] as @p[tag=camera] at @s unless entity @p[distan
 #
 execute if entity @p[tag=follow] as @p[tag=follow] run function core:stream/follow
 
-execute if entity @e[type=minecraft:armor_stand,tag=camera_hub] unless @p[tag=camera] run kill @e[type=armor_stand,tag=camera_hub]
+execute if entity @e[type=minecraft:armor_stand,tag=camera_hub] unless entity @p[tag=camera] run kill @e[type=armor_stand,tag=camera_hub]
 
 execute if entity @p[tag=camera] as @p[tag=camera] at @s facing entity @e[tag=camera_hub,type=armor_stand,limit=1] eyes run tp @s ^ ^ ^0.1 ~ ~
 #
