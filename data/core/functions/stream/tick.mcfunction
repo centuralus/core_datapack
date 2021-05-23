@@ -41,7 +41,7 @@ execute if entity @p[tag=follow] as @p[tag=follow] run function core:stream/foll
 
 execute if entity @e[type=minecraft:area_effect_cloud,tag=camera_hub] unless entity @p[tag=camera] run kill @e[type=area_effect_cloud,tag=camera_hub]
 
-execute if entity @p[tag=camera] as @p[tag=camera] at @s facing entity @e[tag=camera_hub,type=area_effect_cloud,limit=1] eyes run tp @s ^ ^ ^0.1 ~ ~
+execute if entity @p[tag=camera] as @p[tag=camera] at @s unless entity @e[tag=camera_hub,type=area_effect_cloud,limit=1,distance=..4] facing entity @e[tag=camera_hub,type=area_effect_cloud,limit=1] eyes run tp @s ^ ^ ^0.1 ~ ~
 
 execute unless entity @e[type=minecraft:area_effect_cloud,tag=camera_hub] at @p[tag=camera] run summon area_effect_cloud ~ ~0.225 ~ {Age:-2147483648,Duration:-1,WaitTime:-2147483648,Tags:["camera_hub"]}
 #
