@@ -8,7 +8,7 @@ execute if entity @s[tag=follow,tag=update] run scoreboard players reset @s came
 execute if entity @s[tag=follow,tag=update] run tag @s remove update
 
 
-execute if entity @p[tag=camera] at @p[tag=camera] if entity @p[distance=..32,tag=!camera] if score @s camera_timer matches 50 run tag @s add update
+execute if entity @p[tag=camera] at @p[tag=camera] if entity @p[distance=..32,tag=!camera] if score @s camera_timer matches 50.. run tag @s add update
 
 
 #execute if entity @p[tag=camera] at @p[tag=camera] if entity @p[distance=..32,tag=!camera] if score @s camera_timer matches 1 run tag @s add update
