@@ -51,4 +51,4 @@ execute if entity @p[tag=camera] as @a[tag=camera] at @s unless entity @p[distan
 execute if entity @p[tag=select] as @p[tag=select] at @s run tp @e[tag=camera_hub,limit=1]
 execute if entity @p[tag=select] as @p[tag=select] run tag @s remove select
 
-execute if entity @p[tag=camera] as @p[tag=camera] at @s unless @p[team=!away,tag=!block_stream,distance=..32] run tp @s @e[tag=camera_hub]
+execute if entity @p[tag=camera] as @p[tag=camera] at @s unless entity @p[team=!away,tag=!block_stream,distance=..32] run tp @s @e[tag=camera_hub,limit=1]
