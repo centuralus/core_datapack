@@ -33,7 +33,7 @@ execute if entity @p[tag=reset_stream] as @p[tag=reset_stream] run scoreboard pl
 execute if entity @p[tag=reset_stream] as @p[tag=reset_stream] run tag @s remove reset_stream
 
 
-execute if entity @p[tag=follow] as @p[tag=follow] at @s unless @p[tag=camera,distance=..32] run tag @s remove follow
+execute if entity @p[tag=follow] as @p[tag=follow] at @s unless entity @p[tag=camera,distance=..32] run tag @s remove follow
 
 execute if entity @p[tag=camera] as @p[tag=camera] at @s unless entity @p[distance=..32,tag=!block_stream] run tag @r[team=!away,tag=!camera,tag=!block_stream] add follow
 #
@@ -41,5 +41,5 @@ execute if entity @p[tag=follow] as @p[tag=follow] run function core:stream/foll
 
 execute if entity @e[type=minecraft:armor_stand,tag=camera_hub] unless @p[tag=camera] run kill @e[type=armor_stand,tag=camera_hub]
 
-execute if entity @p[tag=camera] as @p[tag=camera] at @s facing entity @e[tag=camera_hub,type=armor_stand] eyes run tp @s ^ ^ ^0.1 ~ ~
+execute if entity @p[tag=camera] as @p[tag=camera] at @s facing entity @e[tag=camera_hub,type=armor_stand,limit=1] eyes run tp @s ^ ^ ^0.1 ~ ~
 #
