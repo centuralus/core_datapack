@@ -1,9 +1,10 @@
 #execute if entity @s[tag=follow,tag=update] store result score @s follow_x run data get entity @s Pos[0] 1
 #execute if entity @s[tag=follow,tag=update] store result score @s follow_y run data get entity @s Pos[1] 1
 #execute if entity @s[tag=follow,tag=update] store result score @s follow_z run data get entity @s Pos[2] 1
-execute if entity @s[tag=follow,tag=update] run data modify entity @e[tag=camera_hub,limit=1] Pos[0] set from entity @s Pos[0]
-execute if entity @s[tag=follow,tag=update] run data modify entity @e[tag=camera_hub,limit=1] Pos[1] set from entity @s Pos[1]
-execute if entity @s[tag=follow,tag=update] run data modify entity @e[tag=camera_hub,limit=1] Pos[2] set from entity @s Pos[2]
+#execute if entity @s[tag=follow,tag=update] run data modify entity @e[tag=camera_hub,limit=1] Pos[0] set from entity @s Pos[0]
+#execute if entity @s[tag=follow,tag=update] run data modify entity @e[tag=camera_hub,limit=1] Pos[1] set from entity @s Pos[1]
+#execute if entity @s[tag=follow,tag=update] run data modify entity @e[tag=camera_hub,limit=1] Pos[2] set from entity @s Pos[2]
+execute if entity @s[tag=follow,tag=update] run tp @e[tag=camera_hub,limit=1] @s
 execute if entity @s[tag=follow,tag=update] run scoreboard players reset @s camera_timer
 execute if entity @s[tag=follow,tag=update] run tag @s remove update
 
