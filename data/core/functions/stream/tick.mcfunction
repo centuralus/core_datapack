@@ -33,22 +33,22 @@ execute if entity @p[tag=reset_stream] as @p[tag=reset_stream] run scoreboard pl
 execute if entity @p[tag=reset_stream] as @p[tag=reset_stream] run tag @s remove reset_stream
 
 
-execute if entity @p[tag=follow] as @p[tag=follow] at @s unless entity @p[tag=camera,distance=..32] run tag @s remove follow
+#execute if entity @p[tag=follow] as @p[tag=follow] at @s unless entity @p[tag=camera,distance=..32] run tag @s remove follow
 
-execute if entity @p[tag=camera] as @p[tag=camera] at @s unless entity @p[distance=..32,tag=!block_stream] run tag @r[team=!away,tag=!camera,tag=!block_stream] add follow
+#execute if entity @p[tag=camera] as @p[tag=camera] at @s unless entity @p[distance=..32,tag=!block_stream] run tag @r[team=!away,tag=!camera,tag=!block_stream] add follow
 #
-execute if entity @p[tag=follow] as @p[tag=follow] run function core:stream/follow
+#execute if entity @p[tag=follow] as @p[tag=follow] run function core:stream/follow
 
-execute if entity @e[type=minecraft:area_effect_cloud,tag=camera_hub] unless entity @p[tag=camera] run kill @e[type=area_effect_cloud,tag=camera_hub]
+#execute if entity @e[type=minecraft:area_effect_cloud,tag=camera_hub] unless entity @p[tag=camera] run kill @e[type=area_effect_cloud,tag=camera_hub]
 
-execute if entity @p[tag=camera] as @p[tag=camera] at @s unless entity @e[tag=camera_hub,type=area_effect_cloud,limit=1,distance=..4] facing entity @e[tag=camera_hub,type=area_effect_cloud,limit=1] eyes run tp @s ^ ^ ^0.1 ~ ~
+#execute if entity @p[tag=camera] as @p[tag=camera] at @s unless entity @e[tag=camera_hub,type=area_effect_cloud,limit=1,distance=..4] facing entity @e[tag=camera_hub,type=area_effect_cloud,limit=1] eyes run tp @s ^ ^ ^0.1 ~ ~
 
-execute unless entity @e[type=minecraft:area_effect_cloud,tag=camera_hub] at @p[tag=camera] run summon area_effect_cloud ~ ~0.225 ~ {Age:-2147483648,Duration:-1,WaitTime:-2147483648,Tags:["camera_hub"]}
+#execute unless entity @e[type=minecraft:area_effect_cloud,tag=camera_hub] at @p[tag=camera] run summon area_effect_cloud ~ ~0.225 ~ {Age:-2147483648,Duration:-1,WaitTime:-2147483648,Tags:["camera_hub"]}
 #
 
-execute if entity @e[tag=camera_hub] as @e[tag=camera_hub] at @s unless entity @p[distance=..32,team=!away,tag=!block_stream] run tag @r[team=!away,tag=!block_stream] add select
+#execute if entity @e[tag=camera_hub] as @e[tag=camera_hub] at @s unless entity @p[distance=..32,team=!away,tag=!block_stream] run tag @r[team=!away,tag=!block_stream] add select
 
-execute if entity @p[tag=select] as @p[tag=select] at @s run tp @e[tag=camera_hub,limit=1] ~ ~ ~
-execute if entity @p[tag=select] as @p[tag=select] run tag @s remove select
+#execute if entity @p[tag=select] as @p[tag=select] at @s run tp @e[tag=camera_hub,limit=1] ~ ~ ~
+#execute if entity @p[tag=select] as @p[tag=select] run tag @s remove select
 
-execute if entity @p[tag=camera] as @p[tag=camera] at @s unless entity @p[team=!away,tag=!block_stream,distance=..32] run tp @s @e[tag=camera_hub,limit=1]
+#execute if entity @p[tag=camera] as @p[tag=camera] at @s unless entity @p[team=!away,tag=!block_stream,distance=..32] run tp @s @e[tag=camera_hub,limit=1]
