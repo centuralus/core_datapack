@@ -37,11 +37,11 @@ execute if entity @p as @p run function core:stream/token
 execute if entity @p[scores={stream_timer=..-1},tag=!block_stream] as @a[scores={stream_timer=..-1},tag=!block_stream] run scoreboard players set @s stream_timer 0
 
 
-execute if entity @p[scores={stream_timer=2000..},tag=!block_stream] as @a[scores={stream_timer=2000..},tag=!block_stream] run tag @s add reset_stream_token
+execute if entity @p[scores={stream_timer=20000..},tag=!block_stream] as @a[scores={stream_timer=20000..},tag=!block_stream] run tag @s add receive_stream_token
 
-execute if entity @p[scores={stream_timer=2000..},tag=!block_stream] as @a[scores={stream_timer=2000..},tag=!block_stream] run scoreboard players set @s stream_timer 0
+execute if entity @p[scores={stream_timer=20000..},tag=!block_stream] as @a[scores={stream_timer=20000..},tag=!block_stream] run scoreboard players set @s stream_timer 0
 
-execute if entity @p[scores={stream_timer=2000..},tag=block_stream] as @a[scores={stream_timer=2000..},tag=block_stream] run scoreboard players set @s stream_timer -20000000
+execute if entity @p[scores={stream_timer=20000..},tag=block_stream] as @a[scores={stream_timer=20000..},tag=block_stream] run scoreboard players set @s stream_timer -20000000
 
 #execute if entity @p[tag=follow] as @p[tag=follow] at @s unless entity @p[tag=camera,distance=..32] run tag @s remove follow
 
