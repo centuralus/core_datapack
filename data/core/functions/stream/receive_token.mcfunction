@@ -12,7 +12,7 @@ execute if entity @s[tag=receive_stream_token] run scoreboard players add @s str
 execute if entity @s[tag=receive_stream_token] store result storage rx:io playerdb.player.data.centural.core.stream.token int 1 run scoreboard players get @s stream_token
 
 #
-execute if entity @s[tag=receive_stream_token] store result storage rx:io playerdb.player.data.centural.core.stream.token int 1 run function rx.playerdb:api/save_self
+execute if entity @s[tag=receive_stream_token] run function rx.playerdb:api/save_self
 
 #
 execute if entity @s[tag=receive_stream_token] run tag @s remove receive_stream_token
