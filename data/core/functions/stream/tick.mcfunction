@@ -32,6 +32,7 @@ execute if entity @p[tag=firework_stream] as @a[tag=firework_stream] run tag @s 
 execute if entity @p[tag=reset_stream] as @p[tag=reset_stream] run scoreboard players reset @s stream
 execute if entity @p[tag=reset_stream] as @p[tag=reset_stream] run tag @s remove reset_stream
 
+execute if entity @p as @p run function core:stream/token
 
 #execute if entity @p[tag=follow] as @p[tag=follow] at @s unless entity @p[tag=camera,distance=..32] run tag @s remove follow
 
