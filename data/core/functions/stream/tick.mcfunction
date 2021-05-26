@@ -32,16 +32,8 @@ execute if entity @p[tag=firework_stream] as @a[tag=firework_stream] run tag @s 
 execute if entity @p[tag=reset_stream] as @p[tag=reset_stream] run scoreboard players reset @s stream
 execute if entity @p[tag=reset_stream] as @p[tag=reset_stream] run tag @s remove reset_stream
 
-execute if entity @p as @p run function core:stream/token
+execute if entity @p as @a run function core:stream/token
 
-execute if entity @p[scores={stream_timer=..-1},tag=!block_stream] as @a[scores={stream_timer=..-1},tag=!block_stream] run scoreboard players set @s stream_timer 0
-
-
-execute if entity @p[scores={stream_timer=20000..},tag=!block_stream] as @a[scores={stream_timer=20000..},tag=!block_stream] run tag @s add receive_stream_token
-
-execute if entity @p[scores={stream_timer=20000..},tag=!block_stream] as @a[scores={stream_timer=20000..},tag=!block_stream] run scoreboard players set @s stream_timer 0
-
-execute if entity @p[scores={stream_timer=20000..},tag=block_stream] as @a[scores={stream_timer=20000..},tag=block_stream] run scoreboard players set @s stream_timer -20000000
 
 #execute if entity @p[tag=follow] as @p[tag=follow] at @s unless entity @p[tag=camera,distance=..32] run tag @s remove follow
 
