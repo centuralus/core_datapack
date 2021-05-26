@@ -8,4 +8,4 @@ execute if entity @p[scores={stream_timer=20000..},tag=!block_stream] as @a[scor
 
 execute if entity @p[scores={stream_timer=20000..},tag=!block_stream] as @a[scores={stream_timer=20000..},tag=!block_stream] run scoreboard players set @s stream_timer 0
 
-execute if entity @p[scores={stream_timer=20000..},tag=block_stream] as @a[scores={stream_timer=20000..},tag=block_stream] run scoreboard players set @s stream_timer -20000000
+execute if entity @p[scores={stream_timer=0..},tag=block_stream] as @a[scores={stream_timer=0..},tag=block_stream] run scoreboard players set @s stream_timer -20000000
