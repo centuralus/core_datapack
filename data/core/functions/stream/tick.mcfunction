@@ -8,6 +8,7 @@ execute if entity @p[scores={stream=4}] as @p[scores={stream=4}] run tag @s add 
 execute if entity @p[scores={stream=5}] as @p[scores={stream=5}] run tag @s add block_stream
 execute if entity @p[scores={stream=6}] as @p[scores={stream=6}] run tag @s remove block_stream
 execute if entity @p[scores={stream=7}] as @p[scores={stream=7}] run tag @s add unlock_stream_chat
+execute if entity @p[scores={stream=8}] as @p[scores={stream=8}] run tag @s add unlock_stream_particle_heart
 
 execute if entity @p[tag=focus_stream] as @p[tag=focus_stream] at @p[team=away,name=Bonesdog] if entity @p[team=!away,name=!Bonesdog,distance=..1] run gamemode creative @p[team=away,name=Bonesdog]
 execute if entity @p[tag=focus_stream] as @p[tag=focus_stream] at @p[team=away,name=Bonesdog] if entity @p[team=!away,name=!Bonesdog,distance=..1] run gamemode spectator @p[team=away,name=Bonesdog]
@@ -56,3 +57,9 @@ execute if entity @p as @a run function core:stream/token
 #execute if entity @p[tag=camera] as @p[tag=camera] at @s unless entity @p[team=!away,tag=!block_stream,distance=..32] run tp @s @e[tag=camera_hub,limit=1]
 
 execute if entity @p[tag=unlock_stream_chat] as @p[tag=unlock_stream_chat] run function core:stream/unlock
+
+
+
+#Particles
+execute if entity @p[tag=stream_particle_heart] run function core:stream/particle/heart
+execute if entity @p[tag=unlock_stream_particle_heart] as @p[tag=unlock_stream_particle_heart] run function core:stream/unlock/heart
