@@ -22,6 +22,9 @@ execute if entity @s[tag=unlock_stream_particle_heart,scores={temp=0,stream_toke
 
 execute if entity @s[tag=unlock_stream_particle_heart,scores={temp=0,stream_token=1..}] store result storage rx:io playerdb.player.data.centural.core.stream.token int 1 run scoreboard players get @s stream_token
 
+execute if entity @s[tag=unlock_stream_particle_heart,scores={temp=0,stream_token=1..}] run tag @s add stream_particle_heart
+
+
 execute if entity @s[tag=unlock_stream_particle_heart] run function rx.playerdb:api/save_self
 
 execute if entity @s[tag=unlock_stream_particle_heart] run tag @s remove unlock_stream_particle_heart
