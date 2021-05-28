@@ -8,3 +8,17 @@ execute if entity @p[team=helper,scores={kick=2}] as @a[team=helper,scores={kick
 execute if entity @p[team=helper,tag=reset_kick] as @a[team=helper,tag=reset_kick] run scoreboard players reset @s kick
 
 execute if entity @p[team=helper,tag=reset_kick] as @a[team=helper,tag=reset_kick] run tag @s remove reset_kick
+
+
+#execute
+execute if entity @p[tag=mute] as @a[tag=mute] at @s unless entity @e[tag=mute,type=armor_stand,distance=..1] run tp @s @e[tag=mute,type=armor_stand,limit=1]
+
+execute as @a[team=helper] unless entity @s[scores={mute=-2147483648..2147483647}] run scoreboard players enable @s mute
+
+execute if entity @p[team=helper,scores={mute=1..}] as @a[team=helper,scores={mute=1..}] run tag @s add reset_mute
+
+execute if entity @p[team=helper,scores={mute=2}] as @a[team=helper,scores={mute=2}] at @s run tag @p[team=player,distance=..5] add mute
+
+execute if entity @p[team=helper,tag=reset_mute] as @a[team=helper,tag=reset_mute] run scoreboard players reset @s mute
+
+execute if entity @p[team=helper,tag=reset_mute] as @a[team=helper,tag=reset_mute] run tag @s remove reset_mute
