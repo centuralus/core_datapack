@@ -11,7 +11,7 @@ execute if entity @p[team=helper,tag=reset_kick] as @a[team=helper,tag=reset_kic
 
 
 #execute
-execute if entity @p[tag=mute] as @a[tag=mute] at @s unless entity @e[tag=mute,type=armor_stand,distance=..1] run tp @s @e[tag=mute,type=armor_stand,limit=1]
+execute if entity @p[tag=mute] as @a[tag=mute] at @s positioned ~ ~3 ~ unless entity @e[tag=mute,type=armor_stand,distance=0] at @e[tag=mute,type=armor_stand,limit=1] positioned ~ ~-3 ~ run tp @s ~ ~ ~
 
 execute as @a[team=helper] unless entity @s[scores={mute=-2147483648..2147483647}] run scoreboard players enable @s mute
 
