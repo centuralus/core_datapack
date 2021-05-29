@@ -52,7 +52,7 @@ execute if entity @p[scores={spawn=1..}] as @a[scores={spawn=1..}] run scoreboar
 execute if entity @e[tag=spawn,type=armor_stand] as @e[tag=spawn,type=armor_stand] if entity @e[type=minecraft:tnt_minecart,distance=..256] run kill @e[type=minecraft:tnt_minecart,distance=..256]
 execute if entity @e[tag=spawn,type=armor_stand] as @e[tag=spawn,type=armor_stand] if entity @e[type=tnt,distance=..256] run kill @e[type=tnt,distance=..256]
 execute if entity @e[tag=spawn,type=armor_stand] as @e[tag=spawn,type=armor_stand] if entity @e[type=arrow,distance=..256] run kill @e[type=arrow,distance=..256]
-execute if entity @e[tag=spawn,type=armor_stand] as @e[tag=spawn,type=armor_stand] if entity @p[distance=..16,team=!operator,tag=!operator] as @a[distance=..256,team=!operator,tag=!operator] at @s unless entity @e[tag=guard,distance=..0.5,type=slime] run summon slime ~ ~42 ~ {NoGravity:1b,Silent:1b,Invulnerable:1b,Team:"player",NoAI:1b,Size:4,Tags:["guard"],ActiveEffects:[{Id:14b,Amplifier:99b,Duration:19999980,ShowParticles:0b}]}
+execute if entity @e[tag=spawn,type=armor_stand] as @e[tag=spawn,type=armor_stand] if entity @p[distance=..256,team=!operator,tag=!operator] as @a[distance=..256,team=!operator,tag=!operator] at @s unless entity @e[tag=guard,distance=..0.5,type=slime] run summon slime ~ ~42 ~ {NoGravity:1b,Silent:1b,Invulnerable:1b,Team:"player",NoAI:1b,Size:4,Tags:["guard"],ActiveEffects:[{Id:14b,Amplifier:99b,Duration:19999980,ShowParticles:0b}]}
 
 execute if entity @e[tag=spawn,type=armor_stand] as @e[tag=spawn,type=armor_stand] as @a[distance=..256] at @s unless entity @e[tag=guard,distance=0,type=slime] positioned ~ ~42 ~ run tp @e[tag=guard,distance=..1,type=slime,limit=1] @s
 
