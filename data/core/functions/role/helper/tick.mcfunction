@@ -32,7 +32,7 @@ execute if entity @p[tag=kick] as @a[tag=kick] run kick @s "You have been kicked
 execute if entity @p[tag=ban,tag=banned] as @a[tag=ban,tag=banned] run tag @s remove ban
 execute if entity @p[tag=banned] as @a[tag=banned] run tag @s remove banned
 execute if entity @p[tag=ban] as @a[tag=ban] run tag @s add banned
-execute if entity @p[tag=ban] as @a[tag=ban] run ban @s "You have been banned. Visit https://discord.gg/dnwDqDKpd9 to appeal your ban."
+execute if entity @p[tag=ban] as @a[tag=ban] run ban @a[tag=ban] "You have been banned. Visit https://discord.gg/dnwDqDKpd9 to appeal your ban."
 
 
 execute if entity @p[team=helper,tag=kick_menu] as @a[team=helper,tag=kick_menu] run tellraw @s {"text":"Click a player name from the list below.","color":"yellow"}
