@@ -62,6 +62,6 @@ execute if entity @e[tag=guard,type=slime] as @e[tag=guard,type=slime] at @s unl
 
 
 # NPC Protect
-execute if entity @e[tag=spawn,type=armor_stand] at @e[tag=spawn,type=armor_stand] if entity @e[type=!area_effect_cloud,type=!boat,type=!player,type=!villager,type=!slime,type=!falling_block,type=!armor_stand,distance=..256] run spreadplayers ~ ~ 256 320 true @e[type=!area_effect_cloud,type=!player,type=!villager,type=!slime,type=!armor_stand,type=!boat,type=!item,type=!falling_block,distance=..256]
+#execute if entity @e[tag=spawn,type=armor_stand] at @e[tag=spawn,type=armor_stand] if entity @e[type=!area_effect_cloud,type=!boat,type=!player,type=!villager,type=!slime,type=!falling_block,type=!armor_stand,distance=..256] run tag @e[type=!area_effect_cloud,type=!player,type=!villager,type=!slime,type=!armor_stand,type=!boat,type=!item,type=!falling_block,distance=..256] add kill
 
 # NPC Protect
