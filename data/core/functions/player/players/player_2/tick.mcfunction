@@ -8,6 +8,10 @@ execute if entity @p[scores={player_2_menu=1}] as @a[scores={player_2_menu=1}] r
 
 #End Prefix🔥 🌊
 #["",{"color":"#F7630C","text":"[🔥]","clickEvent":{"action":"run_command","value":"/trigger prefix set 2"}},{"text":"[🌊]","color":"#23CBF6","clickEvent":{"action":"run_command","value":"/trigger prefix set 3"}}]
+execute if entity @s[team=player_2,scores={prefix=2}] run 
+team modify player_2 prefix ["",{"text":"🔥","color":"#F7630C","clickEvent":{"action":"run_command","value":"/trigger player_2_menu set 1"}}]
+execute if entity @s[team=player_2,scores={prefix=3}] run 
+team modify player_2 prefix ["",{"text":"🌊","color":"#23CBF6","clickEvent":{"action":"run_command","value":"/trigger player_2_menu set 1"}}]
 
 #
 execute if entity @p[tag=player_2_menu,team=player_2] as @a[tag=player_2_menu,team=player_2] run tellraw @s ["",{"text":"Personal Menu"}]

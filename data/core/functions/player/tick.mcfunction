@@ -27,10 +27,7 @@ execute if entity @p as @a unless entity @s[scores={prefix=-2147483648..21474836
 execute if entity @p[scores={prefix=1..}] as @a[scores={prefix=1..}] run tag @s add reset_prefix
 
 execute if entity @p run function core:player/generated
-execute if entity @p[team=player_2,scores={prefix=2}] run 
-team modify player_2 prefix ["",{"text":"🔥","color":"#F7630C","clickEvent":{"action":"run_command","value":"/trigger player_2_menu set 1"}}]
-execute if entity @p[team=player_2,scores={prefix=3}] run 
-team modify player_2 prefix ["",{"text":"🌊","color":"#23CBF6","clickEvent":{"action":"run_command","value":"/trigger player_2_menu set 1"}}]
+
 
 
 execute if entity @p[scores={settings=1..}] as @a[scores={settings=1..}] run tag @s add reset_settings
