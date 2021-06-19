@@ -32,6 +32,22 @@ execute if entity @p[scores={settings=1}] as @a[scores={settings=1}] run tag @s 
 execute if entity @p[scores={settings=-1}] as @a[scores={settings=-1}] run tag @s remove personal_menu_show_spawn
 execute if entity @p[scores={settings=2}] as @a[scores={settings=2}] run tag @s add personal_menu_show_wild
 execute if entity @p[scores={settings=-2}] as @a[scores={settings=-2}] run tag @s remove personal_menu_show_wild
+execute if entity @p[scores={settings=3}] as @a[scores={settings=3}] run tag @s add personal_menu_show_teleport
+execute if entity @p[scores={settings=-3}] as @a[scores={settings=-3}] run tag @s remove personal_menu_show_teleport
+
+execute if entity @p[scores={settings=4}] as @a[scores={settings=4}] run tag @s add personal_menu_show_set_return
+execute if entity @p[scores={settings=-4}] as @a[scores={settings=-4}] run tag @s remove personal_menu_show_set_return
+
+execute if entity @p[scores={settings=5}] as @a[scores={settings=5}] run tag @s add personal_menu_show_return
+execute if entity @p[scores={settings=-5}] as @a[scores={settings=-5}] run tag @s remove personal_menu_show_return
+
+execute if entity @p[scores={settings=6}] as @a[scores={settings=6}] run tag @s add personal_menu_show_set_home
+execute if entity @p[scores={settings=-6}] as @a[scores={settings=-6}] run tag @s remove personal_menu_show_set_home
+
+execute if entity @p[scores={settings=7}] as @a[scores={settings=7}] run tag @s add personal_menu_show_home
+execute if entity @p[scores={settings=-7}] as @a[scores={settings=-7}] run tag @s remove personal_menu_show_home
+
+
 
 execute if entity @p[tag=reset_settings] as @a[tag=reset_settings] run scoreboard players reset @s settings
 execute if entity @p[tag=reset_settings] as @a[tag=reset_settings] run tag @s remove reset_settings
