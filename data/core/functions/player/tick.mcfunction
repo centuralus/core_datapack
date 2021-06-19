@@ -16,3 +16,22 @@ execute if entity @p[tag=player] as @a[tag=player] run tag @s remove player
 execute if entity @p[scores={player=1..}] as @a[scores={player=1..}] run scoreboard players reset @s player
 
 execute if entity @p run function core:player/generated
+
+#
+
+execute if entity @p as @a unless entity @s[scores={settings=-2147483648..2147483647}] run scoreboard players enable @s settings
+
+execute if entity @p as @a unless entity @s[scores={settings_text=-2147483648..2147483647}] run scoreboard players enable @s settings_text
+
+execute if entity @p[scores={settings=1..}] as @a[scores={settings=1..}] run tag @s add reset_settings
+execute if entity @p[scores={settings_text=1..}] as @a[scores={settings_text=1..}] run tag @s add reset_settings_text
+
+
+execute if entity @p[scores={settings=1}] as @a[scores={settings=1}] run tag @s add personal_menu_show_spawn
+execute if entity @p[scores={settings=-1}] as @a[scores={settings=-1}] run tag @s remove personal_menu_show_spawn
+execute if entity @p[scores={settings=2}] as @a[scores={settings=2}] run tag @s add personal_menu_show_wild
+execute if entity @p[scores={settings=-2}] as @a[scores={settings=-2}] run tag @s remove personal_menu_show_wild
+
+execute if entity @p[tag=reset_settings] as @a[tag=reset_settings] run tag @s remove reset_settings
+
+execute if entity @p[tag=reset_settings_text] as @a[tag=reset_settings_text] run tag @s remove reset_settings_text
