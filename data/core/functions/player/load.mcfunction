@@ -7,6 +7,6 @@ scoreboard objectives add player_2_menu trigger ["",{"text":"[ ]","color":"#10B3
 scoreboard objectives add preffix trigger ["",{"text":"[🗡]","color":"724F00","clickEvent":{"action":"run_command","value":"/trigger set player_2_preffix 2"}},{"text":"[🪓]","color":"724F00","clickEvent":{"action":"run_command","value":"/trigger axe_skill set 2"}}]
 scoreboard objectives add preffix_color trigger ["",{"text":"[Default]","color":"yellow","clickEvent":{"action":"run_command","value":"/trigger set preffix -1"}},{"text":"[Custom]","color":"white","clickEvent":{"action":"suggest_command","value":"/trigger preffix_color set "}}]
 
-
+scoreboard objectives add settings trigger
 scoreboard objectives add settings_text trigger ["",{"text":"[Settings]","color":"gray","clickEvent":{"action":"run_command","value":"/trigger set settings 1"}},{"text":"[Show Spawn]","color":"gray","clickEvent":{"action":"run_command","value":"/trigger set settings 1"}},{"text":"[Hide Spawn]","color":"gray","clickEvent":{"action":"run_command","value":"/trigger set settings -1"}},{"text":"[Show Wild]","color":"gray","clickEvent":{"action":"run_command","value":"/trigger set settings 2"}},{"text":"[Hide Wild]","color":"gray","clickEvent":{"action":"run_command","value":"/trigger set settings -2"}}]
 scoreboard objectives add settings_symbol trigger ["",{"text":"[☼]","color":"gray","clickEvent":{"action":"run_command","value":"/trigger set settings 1"}},{"text":"[☼]","color":"gray","clickEvent":{"action":"run_command","value":"/trigger set settings 1"}}]
