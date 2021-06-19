@@ -24,8 +24,9 @@ execute if entity @p as @a unless entity @s[scores={settings=-2147483648..214748
 execute if entity @p as @a unless entity @s[scores={settings_text=-2147483648..2147483647}] run scoreboard players enable @s settings_text
 
 execute if entity @p[scores={settings=1..}] as @a[scores={settings=1..}] run tag @s add reset_settings
+execute if entity @p[scores={settings=..-1}] as @a[scores={settings=..-1}] run tag @s add reset_settings
 execute if entity @p[scores={settings_text=1..}] as @a[scores={settings_text=1..}] run tag @s add reset_settings_text
-
+execute if entity @p[scores={settings_text=..-1}] as @a[scores={settings_text=..-1}] run tag @s add reset_settings_text
 
 execute if entity @p[scores={settings=1}] as @a[scores={settings=1}] run tag @s add personal_menu_show_spawn
 execute if entity @p[scores={settings=-1}] as @a[scores={settings=-1}] run tag @s remove personal_menu_show_spawn
