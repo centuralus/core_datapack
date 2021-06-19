@@ -2,8 +2,40 @@
 
 scoreboard objectives add temp_count dummy
 scoreboard players set @s temp_count 0
+execute if entity @p[scores={color_spawn_text=2}] as @a[scores={color_spawn_text=2}] run tag @s add color_spawn_text_aqua
+execute if entity @p[scores={color_spawn_text=3}] as @a[scores={color_spawn_text=3}] run tag @s add color_spawn_text_black
+execute if entity @p[scores={color_spawn_text=4}] as @a[scores={color_spawn_text=4}] run tag @s add color_spawn_text_blue
+execute if entity @p[scores={color_spawn_text=5}] as @a[scores={color_spawn_text=5}] run tag @s add color_spawn_text_dark_aqua
+execute if entity @p[scores={color_spawn_text=6}] as @a[scores={color_spawn_text=6}] run tag @s add color_spawn_text_dark_blue
+execute if entity @p[scores={color_spawn_text=7}] as @a[scores={color_spawn_text=7}] run tag @s add color_spawn_text_dark_gray
+execute if entity @p[scores={color_spawn_text=8}] as @a[scores={color_spawn_text=8}] run tag @s add color_spawn_text_dark_green
+execute if entity @p[scores={color_spawn_text=9}] as @a[scores={color_spawn_text=9}] run tag @s add color_spawn_text_dark_purple
+execute if entity @p[scores={color_spawn_text=10}] as @a[scores={color_spawn_text=10}] run tag @s add color_spawn_text_dark_red
+execute if entity @p[scores={color_spawn_text=11}] as @a[scores={color_spawn_text=11}] run tag @s add color_spawn_text_gold
+execute if entity @p[scores={color_spawn_text=12}] as @a[scores={color_spawn_text=12}] run tag @s add color_spawn_text_gray
+execute if entity @p[scores={color_spawn_text=13}] as @a[scores={color_spawn_text=13}] run tag @s add color_spawn_text_green
+execute if entity @p[scores={color_spawn_text=14}] as @a[scores={color_spawn_text=14}] run tag @s add color_spawn_text_light_purple
+execute if entity @p[scores={color_spawn_text=15}] as @a[scores={color_spawn_text=15}] run tag @s add color_spawn_text_red
+execute if entity @p[scores={color_spawn_text=16}] as @a[scores={color_spawn_text=16}] run tag @s add color_spawn_text_white
+execute if entity @p[scores={color_spawn_text=17}] as @a[scores={color_spawn_text=17}] run tag @s add color_spawn_text_yellow
+
 team add spawn_text [{"text":"[Spawn]","clickEvent":{"action":"run_command","value":"/trigger spawn set 1"}}]
-team modify spawn_text prefix ["",{"text":"[Spawn]","clickEvent":{"action":"run_command","value":"/trigger spawn set 1"}}]
+execute if entity @s[tag=color_spawn_text_aqua] run team modify spawn_text prefix ["",{"color":"aqua","text":"[Spawn]","clickEvent":{"action":"run_command","value":"/trigger spawn set 1"}}]
+execute if entity @s[tag=color_spawn_text_black] run team modify spawn_text prefix ["",{"color":"black","text":"[Spawn]","clickEvent":{"action":"run_command","value":"/trigger spawn set 1"}}]
+execute if entity @s[tag=color_spawn_text_blue] run team modify spawn_text prefix ["",{"color":"blue","text":"[Spawn]","clickEvent":{"action":"run_command","value":"/trigger spawn set 1"}}]
+execute if entity @s[tag=color_spawn_text_dark_aqua] run team modify spawn_text prefix ["",{"color":"dark_aqua","text":"[Spawn]","clickEvent":{"action":"run_command","value":"/trigger spawn set 1"}}]
+execute if entity @s[tag=color_spawn_text_dark_blue] run team modify spawn_text prefix ["",{"color":"dark_blue","text":"[Spawn]","clickEvent":{"action":"run_command","value":"/trigger spawn set 1"}}]
+execute if entity @s[tag=color_spawn_text_dark_gray] run team modify spawn_text prefix ["",{"color":"dark_gray","text":"[Spawn]","clickEvent":{"action":"run_command","value":"/trigger spawn set 1"}}]
+execute if entity @s[tag=color_spawn_text_dark_green] run team modify spawn_text prefix ["",{"color":"dark_green","text":"[Spawn]","clickEvent":{"action":"run_command","value":"/trigger spawn set 1"}}]
+execute if entity @s[tag=color_spawn_text_dark_purple] run team modify spawn_text prefix ["",{"color":"dark_purple","text":"[Spawn]","clickEvent":{"action":"run_command","value":"/trigger spawn set 1"}}]
+execute if entity @s[tag=color_spawn_text_dark_red] run team modify spawn_text prefix ["",{"color":"dark_red","text":"[Spawn]","clickEvent":{"action":"run_command","value":"/trigger spawn set 1"}}]
+execute if entity @s[tag=color_spawn_text_gold] run team modify spawn_text prefix ["",{"color":"gold","text":"[Spawn]","clickEvent":{"action":"run_command","value":"/trigger spawn set 1"}}]
+execute if entity @s[tag=color_spawn_text_gray] run team modify spawn_text prefix ["",{"color":"gray","text":"[Spawn]","clickEvent":{"action":"run_command","value":"/trigger spawn set 1"}}]
+execute if entity @s[tag=color_spawn_text_green] run team modify spawn_text prefix ["",{"color":"green","text":"[Spawn]","clickEvent":{"action":"run_command","value":"/trigger spawn set 1"}}]
+execute if entity @s[tag=color_spawn_text_light_purple] run team modify spawn_text prefix ["",{"color":"light_purple","text":"[Spawn]","clickEvent":{"action":"run_command","value":"/trigger spawn set 1"}}]
+execute if entity @s[tag=color_spawn_text_red] run team modify spawn_text prefix ["",{"color":"red","text":"[Spawn]","clickEvent":{"action":"run_command","value":"/trigger spawn set 1"}}]
+execute if entity @s[tag=color_spawn_text_white] run team modify spawn_text prefix ["",{"color":"white","text":"[Spawn]","clickEvent":{"action":"run_command","value":"/trigger spawn set 1"}}]
+execute if entity @s[tag=color_spawn_text_yellow] run team modify spawn_text prefix ["",{"color":"yellow","text":"[Spawn]","clickEvent":{"action":"run_command","value":"/trigger spawn set 1"}}]
 team add wild_text [{"text":"[Wild]","clickEvent":{"action":"run_command","value":"/trigger wild set 2"}}]
 team modify wild_text prefix ["",{"text":"[Wild]","clickEvent":{"action":"run_command","value":"/trigger wild set 2"}}]
 team add teleport_text [{"text":"[Teleport]","clickEvent":{"action":"run_command","value":"/trigger teleport set 1"}}]

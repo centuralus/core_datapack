@@ -23,10 +23,48 @@ execute if entity @p as @a unless entity @s[scores={settings=-2147483648..214748
 
 execute if entity @p as @a unless entity @s[scores={settings_text=-2147483648..2147483647}] run scoreboard players enable @s settings_text
 
+execute if entity @p as @a unless entity @s[scores={color_spawn_text=-2147483648..2147483647}] run scoreboard players enable @s color_spawn_text
+
 execute if entity @p[scores={settings=1..}] as @a[scores={settings=1..}] run tag @s add reset_settings
 execute if entity @p[scores={settings=..-1}] as @a[scores={settings=..-1}] run tag @s add reset_settings
 execute if entity @p[scores={settings_text=1..}] as @a[scores={settings_text=1..}] run tag @s add reset_settings_text
 execute if entity @p[scores={settings_text=..-1}] as @a[scores={settings_text=..-1}] run tag @s add reset_settings_text
+
+execute if entity @p[scores={color_spawn_text=1..}] as @a[scores={color_spawn_text=1..}] run tag @s add reset_color_spawn_text
+execute if entity @p[scores={color_spawn_text=1..}] as @a[scores={color_spawn_text=1..}] run tag @s remove color_spawn_text_aqua
+execute if entity @p[scores={color_spawn_text=1..}] as @a[scores={color_spawn_text=1..}] run tag @s remove color_spawn_text_black
+execute if entity @p[scores={color_spawn_text=1..}] as @a[scores={color_spawn_text=1..}] run tag @s remove color_spawn_text_blue
+execute if entity @p[scores={color_spawn_text=1..}] as @a[scores={color_spawn_text=1..}] run tag @s remove color_spawn_text_dark_aqua
+execute if entity @p[scores={color_spawn_text=1..}] as @a[scores={color_spawn_text=1..}] run tag @s remove color_spawn_text_dark_blue
+execute if entity @p[scores={color_spawn_text=1..}] as @a[scores={color_spawn_text=1..}] run tag @s remove color_spawn_text_dark_gray
+execute if entity @p[scores={color_spawn_text=1..}] as @a[scores={color_spawn_text=1..}] run tag @s remove color_spawn_text_dark_green
+execute if entity @p[scores={color_spawn_text=1..}] as @a[scores={color_spawn_text=1..}] run tag @s remove color_spawn_text_dark_purple
+execute if entity @p[scores={color_spawn_text=1..}] as @a[scores={color_spawn_text=1..}] run tag @s remove color_spawn_text_dark_red
+execute if entity @p[scores={color_spawn_text=1..}] as @a[scores={color_spawn_text=1..}] run tag @s remove color_spawn_text_gold
+execute if entity @p[scores={color_spawn_text=1..}] as @a[scores={color_spawn_text=1..}] run tag @s remove color_spawn_text_gray
+execute if entity @p[scores={color_spawn_text=1..}] as @a[scores={color_spawn_text=1..}] run tag @s remove color_spawn_text_green
+execute if entity @p[scores={color_spawn_text=1..}] as @a[scores={color_spawn_text=1..}] run tag @s remove color_spawn_text_light_purple
+execute if entity @p[scores={color_spawn_text=1..}] as @a[scores={color_spawn_text=1..}] run tag @s remove color_spawn_text_red
+execute if entity @p[scores={color_spawn_text=1..}] as @a[scores={color_spawn_text=1..}] run tag @s remove color_spawn_text_white
+execute if entity @p[scores={color_spawn_text=1..}] as @a[scores={color_spawn_text=1..}] run tag @s remove color_spawn_text_yellow
+
+execute if entity @p[scores={color_spawn_text=2}] as @a[scores={color_spawn_text=2}] run tag @s add color_spawn_text_aqua
+execute if entity @p[scores={color_spawn_text=3}] as @a[scores={color_spawn_text=3}] run tag @s add color_spawn_text_black
+execute if entity @p[scores={color_spawn_text=4}] as @a[scores={color_spawn_text=4}] run tag @s add color_spawn_text_blue
+execute if entity @p[scores={color_spawn_text=5}] as @a[scores={color_spawn_text=5}] run tag @s add color_spawn_text_dark_aqua
+execute if entity @p[scores={color_spawn_text=6}] as @a[scores={color_spawn_text=6}] run tag @s add color_spawn_text_dark_blue
+execute if entity @p[scores={color_spawn_text=7}] as @a[scores={color_spawn_text=7}] run tag @s add color_spawn_text_dark_gray
+execute if entity @p[scores={color_spawn_text=8}] as @a[scores={color_spawn_text=8}] run tag @s add color_spawn_text_dark_green
+execute if entity @p[scores={color_spawn_text=9}] as @a[scores={color_spawn_text=9}] run tag @s add color_spawn_text_dark_purple
+execute if entity @p[scores={color_spawn_text=10}] as @a[scores={color_spawn_text=10}] run tag @s add color_spawn_text_dark_red
+execute if entity @p[scores={color_spawn_text=11}] as @a[scores={color_spawn_text=11}] run tag @s add color_spawn_text_gold
+execute if entity @p[scores={color_spawn_text=12}] as @a[scores={color_spawn_text=12}] run tag @s add color_spawn_text_gray
+execute if entity @p[scores={color_spawn_text=13}] as @a[scores={color_spawn_text=13}] run tag @s add color_spawn_text_green
+execute if entity @p[scores={color_spawn_text=14}] as @a[scores={color_spawn_text=14}] run tag @s add color_spawn_text_light_purple
+execute if entity @p[scores={color_spawn_text=15}] as @a[scores={color_spawn_text=15}] run tag @s add color_spawn_text_red
+execute if entity @p[scores={color_spawn_text=16}] as @a[scores={color_spawn_text=16}] run tag @s add color_spawn_text_white
+execute if entity @p[scores={color_spawn_text=17}] as @a[scores={color_spawn_text=17}] run tag @s add color_spawn_text_yellow
+
 
 execute if entity @p[scores={settings=1}] as @a[scores={settings=1}] run tag @s add personal_menu_show_spawn
 execute if entity @p[scores={settings=-1}] as @a[scores={settings=-1}] run tag @s remove personal_menu_show_spawn
@@ -54,3 +92,6 @@ execute if entity @p[tag=reset_settings] as @a[tag=reset_settings] run tag @s re
 
 execute if entity @p[tag=reset_settings_text] as @a[tag=reset_settings_text] run scoreboard players reset @s settings_text
 execute if entity @p[tag=reset_settings_text] as @a[tag=reset_settings_text] run tag @s remove reset_settings_text
+
+execute if entity @p[tag=reset_color_spawn_text] as @a[tag=reset_color_spawn_text] run scoreboard players reset @s color_spawn_text
+execute if entity @p[tag=reset_color_spawn_text] as @a[tag=reset_color_spawn_text] run tag @s remove reset_color_spawn_text
