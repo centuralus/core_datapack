@@ -26,7 +26,7 @@ execute if entity @p as @a unless entity @s[scores={color_spawn_text=-2147483648
 execute if entity @p as @a unless entity @s[scores={prefix=-2147483648..2147483647}] run scoreboard players enable @s prefix
 execute if entity @p[scores={prefix=1..}] as @a[scores={prefix=1..}] run tag @s add reset_prefix
 
-execute if entity @p as @a unless entity @s[scores={team_color=-2147483648..2147483647}] run scoreboard players enable @s prefix
+execute if entity @p as @a unless entity @s[scores={team_color=-2147483648..2147483647}] run scoreboard players enable @s team_color
 execute if entity @p[scores={team_color=1..}] as @a[scores={team_color=1..}] run tag @s add reset_team_color
 
 execute if entity @p run function core:player/generated
