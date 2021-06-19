@@ -32,7 +32,7 @@ execute if entity @s[scores={team_color=2}] run team modify player_2 color aqua
 execute if entity @s[scores={team_color=3}] run team modify player_2 color black
 execute if entity @s[scores={team_color=4}] run team modify player_2 color blue
 execute if entity @s[scores={team_color=5}] run team modify player_2 color dark_aqua
-execute if entity @s[scores={team_color=6}] run team modify player_2 color ark_blue
+execute if entity @s[scores={team_color=6}] run team modify player_2 color dark_blue
 execute if entity @s[scores={team_color=7}] run team modify player_2 color dark_gray
 execute if entity @s[scores={team_color=8}] run team modify player_2 color dark_green
 execute if entity @s[scores={team_color=9}] run team modify player_2 color dark_purple
@@ -42,7 +42,7 @@ execute if entity @s[scores={team_color=12}] run team modify player_2 color gray
 execute if entity @s[scores={team_color=13}] run team modify player_2 color green
 execute if entity @s[scores={team_color=14}] run team modify player_2 color light_purple
 execute if entity @s[scores={team_color=15}] run team modify player_2 color red
-execute if entity @s[scores={team_color=16}] run team modify player_2 color white
+execute if entity @s[scores={team_color=16}] run team modify player_2 color reset
 execute if entity @s[scores={team_color=17}] run team modify player_2 color yellow
 
 
