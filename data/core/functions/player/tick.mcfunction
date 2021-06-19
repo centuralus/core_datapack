@@ -32,8 +32,8 @@ execute if entity @p[scores={settings=-1}] as @a[scores={settings=-1}] run tag @
 execute if entity @p[scores={settings=2}] as @a[scores={settings=2}] run tag @s add personal_menu_show_wild
 execute if entity @p[scores={settings=-2}] as @a[scores={settings=-2}] run tag @s remove personal_menu_show_wild
 
-execute if entity @p[tag=reset_settings] as @a[tag=reset_settings] run scoreboard player reset @s settings
+execute if entity @p[tag=reset_settings] as @a[tag=reset_settings] run scoreboard players reset @s settings
 execute if entity @p[tag=reset_settings] as @a[tag=reset_settings] run tag @s remove reset_settings
 
-execute if entity @p[tag=reset_settings_text] as @a[tag=reset_settings_text] run scoreboard player reset @s settings_text
+execute if entity @p[tag=reset_settings_text] as @a[tag=reset_settings_text] run scoreboard players reset @s settings_text
 execute if entity @p[tag=reset_settings_text] as @a[tag=reset_settings_text] run tag @s remove reset_settings_text
