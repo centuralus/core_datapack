@@ -4,6 +4,7 @@ scoreboard objectives add temp_count dummy
 scoreboard players set @s temp_count 0
 
 team add spawn_text [{"text":"[Spawn]","clickEvent":{"action":"run_command","value":"/trigger spawn set 1"}}]
+team modify spawn_text prefix ["",{"color":"aqua","text":"[Spawn]","clickEvent":{"action":"run_command","value":"/trigger spawn set 1"}}]
 execute if entity @s[tag=color_spawn_text_aqua] run team modify spawn_text prefix ["",{"color":"aqua","text":"[Spawn]","clickEvent":{"action":"run_command","value":"/trigger spawn set 1"}}]
 execute if entity @s[tag=color_spawn_text_black] run team modify spawn_text prefix ["",{"color":"black","text":"[Spawn]","clickEvent":{"action":"run_command","value":"/trigger spawn set 1"}}]
 execute if entity @s[tag=color_spawn_text_blue] run team modify spawn_text prefix ["",{"color":"blue","text":"[Spawn]","clickEvent":{"action":"run_command","value":"/trigger spawn set 1"}}]
