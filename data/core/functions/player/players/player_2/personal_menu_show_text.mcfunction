@@ -1,6 +1,7 @@
 
 
-
+scoreboard objectives add temp_count dummy
+scoreboard players set @s temp_count 0
 team add spawn_text [{"text":"[Spawn]","clickEvent":{"action":"run_command","value":"/trigger spawn set 1"}}]
 team modify spawn_text prefix ["",{"text":"[Spawn]","clickEvent":{"action":"run_command","value":"/trigger spawn set 1"}}]
 team add wild_text [{"text":"[Wild]","clickEvent":{"action":"run_command","value":"/trigger wild set 2"}}]
@@ -21,15 +22,26 @@ team add settings_text [{"text":"[Settings]","clickEvent":{"action":"run_command
 team modify settings_text prefix ["",{"text":"[Settings]","clickEvent":{"action":"run_command","value":"/trigger settings_text set 1"}}]
 
 execute if entity @s[team=player_2,tag=personal_menu_show_spawn] at @s run summon armor_stand ~ ~ ~ {Invisible:1b,Marker:1b,Team:"spawn_text",Tags:["personal_menu_show_spawn"],CustomName:'{"text":""}'}
+execute if entity @s[team=player_2,tag=personal_menu_show_spawn] run scoreboard players add @s temp_count 1
 
 execute if entity @s[team=player_2,tag=personal_menu_show_wild] at @s run summon armor_stand ~ ~ ~ {Invisible:1b,Marker:1b,Team:"wild_text",Tags:["personal_menu_show_wild"],CustomName:'{"text":""}'}
+execute if entity @s[team=player_2,tag=personal_menu_show_wild] run scoreboard players add @s temp_count 1
 
 execute if entity @s[team=player_2,tag=personal_menu_show_teleport] at @s run summon armor_stand ~ ~ ~ {Invisible:1b,Marker:1b,Team:"teleport_text",Tags:["personal_menu_show_teleport"],CustomName:'{"text":""}'}
+execute if entity @s[team=player_2,tag=personal_menu_show_teleport] run scoreboard players add @s temp_count 1
 
 execute if entity @s[team=player_2,tag=personal_menu_show_set_return] at @s run summon armor_stand ~ ~ ~ {Invisible:1b,Marker:1b,Team:"set_return_text",Tags:["personal_menu_show_set_return"],CustomName:'{"text":""}'}
+execute if entity @s[team=player_2,tag=personal_menu_show_set_return] run scoreboard players add @s temp_count 1
+
 execute if entity @s[team=player_2,tag=personal_menu_show_return] at @s run summon armor_stand ~ ~ ~ {Invisible:1b,Marker:1b,Team:"return_text",Tags:["personal_menu_show_return"],CustomName:'{"text":""}'}
+execute if entity @s[team=player_2,tag=personal_menu_show_return] run scoreboard players add @s temp_count 1
+
 execute if entity @s[team=player_2,tag=personal_menu_show_set_home] at @s run summon armor_stand ~ ~ ~ {Invisible:1b,Marker:1b,Team:"set_home_text",Tags:["personal_menu_show_set_home"],CustomName:'{"text":""}'}
+execute if entity @s[team=player_2,tag=personal_menu_show_set_home] run scoreboard players add @s temp_count 1
+
 execute if entity @s[team=player_2,tag=personal_menu_show_home] at @s run summon armor_stand ~ ~ ~ {Invisible:1b,Marker:1b,Team:"home_text",Tags:["personal_menu_show_home"],CustomName:'{"text":""}'}
+execute if entity @s[team=player_2,tag=personal_menu_show_home] run scoreboard players add @s temp_count 1
+
 
 
 
@@ -42,7 +54,9 @@ execute if entity @s[team=player_2] at @s run summon armor_stand ~ ~ ~ {Invisibl
 #execute if entity @s[team=player_2,tag=!personal_menu_show_spawn,tag=personal_menu_show_wild] run team modify player_2 prefix ["",{"text":"[wild]","clickEvent":{"action":"run_command","value":"/trigger spawn set 1"}},{"text":"[Settings]","clickEvent":{"action":"","value":"/trigger setting set 1"}}]
 #tellraw @s[team=player_2] {"selector":"@e[tag=selector,limit=1]"}
 
-execute at @s run tellraw @s[team=player_2] [{"selector":"@e[tag=personal_menu_show_spawn,type=armor_stand,limit=1,distance=..1]"},{"selector":"@e[tag=personal_menu_show_wild,type=armor_stand,limit=1,distance=..1]"},{"selector":"@e[tag=personal_menu_show_teleport,type=armor_stand,limit=1,distance=..1]"},{"selector":"@e[tag=personal_menu_show_set_return,type=armor_stand,limit=1,distance=..1]"},{"selector":"@e[tag=personal_menu_show_return,type=armor_stand,limit=1,distance=..1]"},{"selector":"@e[tag=personal_menu_show_set_home,type=armor_stand,limit=1,distance=..1]"},{"selector":"@e[tag=personal_menu_show_home,type=armor_stand,limit=1,distance=..1]"},{"selector":"@e[tag=personal_menu_show_settings,type=armor_stand,limit=1,distance=..1]"}]
+execute at @s run tellraw @s[team=player_2,scores={temp_count=0..6}] [{"selector":"@e[tag=personal_menu_show_spawn,type=armor_stand,limit=1,distance=..1]"},{"selector":"@e[tag=personal_menu_show_wild,type=armor_stand,limit=1,distance=..1]"},{"selector":"@e[tag=personal_menu_show_teleport,type=armor_stand,limit=1,distance=..1]"},{"selector":"@e[tag=personal_menu_show_set_return,type=armor_stand,limit=1,distance=..1]"},{"selector":"@e[tag=personal_menu_show_return,type=armor_stand,limit=1,distance=..1]"},{"selector":"@e[tag=personal_menu_show_set_home,type=armor_stand,limit=1,distance=..1]"},{"selector":"@e[tag=personal_menu_show_home,type=armor_stand,limit=1,distance=..1]"},{"selector":"@e[tag=personal_menu_show_settings,type=armor_stand,limit=1,distance=..1]"}]
+execute at @s run tellraw @s[team=player_2,scores={temp_count=7..}] [{"selector":"@e[tag=personal_menu_show_spawn,type=armor_stand,limit=1,distance=..1]"},{"selector":"@e[tag=personal_menu_show_wild,type=armor_stand,limit=1,distance=..1]"},{"selector":"@e[tag=personal_menu_show_teleport,type=armor_stand,limit=1,distance=..1]"},{"selector":"@e[tag=personal_menu_show_set_return,type=armor_stand,limit=1,distance=..1]"},{"selector":"@e[tag=personal_menu_show_return,type=armor_stand,limit=1,distance=..1]"},{"selector":"@e[tag=personal_menu_show_set_home,type=armor_stand,limit=1,distance=..1]"},"\n",{"selector":"@e[tag=personal_menu_show_home,type=armor_stand,limit=1,distance=..1]"},{"selector":"@e[tag=personal_menu_show_settings,type=armor_stand,limit=1,distance=..1]"}]
+
 team remove spawn_text
 team remove wild_text
 execute at @s run kill @e[tag=personal_menu_show_spawn,type=armor_stand]
@@ -53,4 +67,5 @@ execute at @s run kill @e[tag=personal_menu_show_return,type=armor_stand]
 execute at @s run kill @e[tag=personal_menu_show_set_home,type=armor_stand]
 execute at @s run kill @e[tag=personal_menu_show_home,type=armor_stand]
 execute at @s run kill @e[tag=personal_menu_show_settings,type=armor_stand]
+scoreboard objectives remove temp_count
 #execute at @s run kill @e[tag=selector,type=armor_stand]
