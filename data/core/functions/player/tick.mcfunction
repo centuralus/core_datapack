@@ -26,6 +26,9 @@ execute if entity @p as @a unless entity @s[scores={color_spawn_text=-2147483648
 execute if entity @p as @a unless entity @s[scores={prefix=-2147483648..2147483647}] run scoreboard players enable @s prefix
 execute if entity @p[scores={prefix=1..}] as @a[scores={prefix=1..}] run tag @s add reset_prefix
 
+execute if entity @p as @a unless entity @s[scores={team_color=-2147483648..2147483647}] run scoreboard players enable @s prefix
+execute if entity @p[scores={team_color=1..}] as @a[scores={team_color=1..}] run tag @s add reset_team_color
+
 execute if entity @p run function core:player/generated
 
 
@@ -104,3 +107,7 @@ execute if entity @p[tag=reset_color_spawn_text] as @a[tag=reset_color_spawn_tex
 
 execute if entity @p[tag=reset_prefix] as @a[tag=reset_prefix] run scoreboard players reset @s prefix
 execute if entity @p[tag=reset_prefix] as @a[tag=reset_prefix] run tag @s remove reset_prefix
+
+
+execute if entity @p[tag=reset_team_color] as @a[tag=reset_team_color] run scoreboard players reset @s team_color
+execute if entity @p[tag=reset_team_color] as @a[tag=reset_team_color] run tag @s remove reset_team_color

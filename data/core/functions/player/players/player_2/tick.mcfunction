@@ -18,13 +18,34 @@ execute if entity @s[team=player_2,scores={prefix=8}] run team modify player_2 p
 execute if entity @s[team=player_2,scores={prefix=9}] run team modify player_2 prefix ["",{"text":"🧪","color":"#00B294","clickEvent":{"action":"run_command","value":"/trigger player_2_menu set 1"}}]
 execute if entity @s[team=player_2,scores={prefix=10}] run team modify player_2 prefix ["",{"text":"⛄","color":"#FFFFFF","clickEvent":{"action":"run_command","value":"/trigger player_2_menu set 1"}}]
 execute if entity @s[team=player_2,scores={prefix=11}] run team modify player_2 prefix ["",{"text":"⚡","color":"#FFC83D","clickEvent":{"action":"run_command","value":"/trigger player_2_menu set 1"}}]
-execute if entity @s[team=player_2,scores={prefix=12}] run team modify player_2 prefix ["",{"text":"⛏","color":"#000000","clickEvent":{"action":"run_command","value":"/trigger player_2_menu set 1"}}]
+execute if entity @s[team=player_2,scores={prefix=12}] run team modify player_2 prefix ["",{"text":"⛏","color":"#0F0F0F","clickEvent":{"action":"run_command","value":"/trigger player_2_menu set 1"}}]
 execute if entity @s[team=player_2,scores={prefix=13}] run team modify player_2 prefix ["",{"text":"❄","color":"#FFFFFF","clickEvent":{"action":"run_command","value":"/trigger player_2_menu set 1"}}]
 execute if entity @s[team=player_2,scores={prefix=14}] run team modify player_2 prefix ["",{"text":"❤","color":"#F03A17","clickEvent":{"action":"run_command","value":"/trigger player_2_menu set 1"}}]
 execute if entity @s[team=player_2,scores={prefix=15}] run team modify player_2 prefix ["",{"text":"⚓","color":"#525252","clickEvent":{"action":"run_command","value":"/trigger player_2_menu set 1"}}]
 execute if entity @s[team=player_2,scores={prefix=16}] run team modify player_2 prefix ["",{"text":"⛨","color":"#F8F9FA","clickEvent":{"action":"run_command","value":"/trigger player_2_menu set 1"}}]
 execute if entity @s[team=player_2,scores={prefix=17}] run team modify player_2 prefix ["",{"text":"☔","color":"#886CE4","clickEvent":{"action":"run_command","value":"/trigger player_2_menu set 1"}}]
 #["",{"color":"#F7630C","text":"[🔥]","clickEvent":{"action":"run_command","value":"/trigger prefix set 2"}},{"text":"[🌊]","color":"#23CBF6","clickEvent":{"action":"run_command","value":"/trigger prefix set 3"}},{"text":"[🗡]","color":"#727273","clickEvent":{"action":"run_command","value":"/trigger prefix set 4"}},{"text":"[🏹]","color":"#722D09","clickEvent":{"action":"run_command","value":"/trigger prefix set 5"}},{"text":"[🪓]","color":"#F03A17","clickEvent":{"action":"run_command","value":"/trigger prefix set 6"}},{"text":"[🔱]","color":"#FFB900","clickEvent":{"action":"run_command","value":"/trigger prefix set 7"}},{"text":"[🎣]","color":"#31D2F7","clickEvent":{"action":"run_command","value":"/trigger prefix set 8"}},{"text":"[🧪]","color":"#00B294","clickEvent":{"action":"run_command","value":"/trigger prefix set 9"}},{"text":"[⛄]","color":"#FFFFFF","clickEvent":{"action":"run_command","value":"/trigger prefix set 10"}},{"text":"[⚡]","color":"#FFC83D","clickEvent":{"action":"run_command","value":"/trigger prefix set 11"}},{"text":"[⛏]","color":"#000000","clickEvent":{"action":"run_command","value":"/trigger prefix set 12"}},{"text":"[❄]","color":"#FFFFFF","clickEvent":{"action":"run_command","value":"/trigger prefix set 13"}},{"text":"[❤]","color":"#F03A17","clickEvent":{"action":"run_command","value":"/trigger prefix set 14"}},{"text":"[⚓]","color":"#525252","clickEvent":{"action":"run_command","value":"/trigger prefix set 15"}},{"text":"[⛨]","color":"#F8F9FA","clickEvent":{"action":"run_command","value":"/trigger prefix set 16"}},{"text":"[☔]","color":"#886CE4","clickEvent":{"action":"run_command","value":"/trigger prefix set 17"}}]
+
+
+
+execute if entity @s[scores={team_color=2}] run team modify player_2 color aqua
+execute if entity @s[scores={team_color=3}] run team modify player_2 color black
+execute if entity @s[scores={team_color=4}] run team modify player_2 color blue
+execute if entity @s[scores={team_color=5}] run team modify player_2 color dark_aqua
+execute if entity @s[scores={team_color=6}] run team modify player_2 color ark_blue
+execute if entity @s[scores={team_color=7}] run team modify player_2 color dark_gray
+execute if entity @s[scores={team_color=8}] run team modify player_2 color dark_green
+execute if entity @s[scores={team_color=9}] run team modify player_2 color dark_purple
+execute if entity @s[scores={team_color=10}] run team modify player_2 color dark_red
+execute if entity @s[scores={team_color=11}] run team modify player_2 color gold
+execute if entity @s[scores={team_color=12}] run team modify player_2 color gray
+execute if entity @s[scores={team_color=13}] run team modify player_2 color green
+execute if entity @s[scores={team_color=14}] run team modify player_2 color light_purple
+execute if entity @s[scores={team_color=15}] run team modify player_2 color red
+execute if entity @s[scores={team_color=16}] run team modify player_2 color white
+execute if entity @s[scores={team_color=17}] run team modify player_2 color yellow
+
+
 
 #
 execute if entity @p[tag=player_2_menu,team=player_2] as @a[tag=player_2_menu,team=player_2] run tellraw @s ["",{"text":"Personal Menu"}]
