@@ -15,6 +15,10 @@ execute in core:peaceful if entity @p[tag=claim] as @a[tag=claim] at @s if entit
 execute in core:peaceful if entity @p[tag=claim] as @a[tag=claim] at @s if entity @e[tag=claim,type=armor_stand,distance=..64] run tag @s remove claim
 execute in core:peaceful if entity @p[tag=claim] as @a[tag=claim] unless entity @e[tag=claim,type=armor_stand,distance=..64] run summon armor_stand ~ ~ ~ {Tags:["claim"],Marker:1b,Invisible:1b,NoGravity:1b}
 
+
+#
+execute in core:peaceful if entity @p[gamemode=survival] as @a[gamemode=survival] at @s if entity @e[tag=claim,distance=..64] 
+
 #execute if entity @p[tag=mark_protected,team=builder,tag=!store_x,tag=!store_y,tag=!store_z] as @a[tag=mark_protected,team=builder,tag=!store_x,tag=!store_y,tag=!store_z] at @s if entity @e[tag=protected,distance=..48] run tellraw @s "This area is already protected."
 #execute if entity @p[tag=mark_protected,team=builder,tag=!store_x,tag=!store_y,tag=!store_z] as @a[tag=mark_protected,team=builder,tag=!store_x,tag=!store_y,tag=!store_z] at @s if entity @e[tag=protected,distance=..48] run tag @s remove mark_protected
 
