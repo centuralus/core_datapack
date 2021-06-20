@@ -4,213 +4,283 @@ scoreboard objectives add axe_skill trigger ["",{"text":"[🪓]","color":"724F00
 #;generate_player_team
 team add player_2 ["",{"text":"[✌]","color":"#10B3C9"}]
 team modify player_2 prefix ["",{"text":"✌","color":"#10B3C9","clickEvent":{"action":"run_command","value":"/trigger player_2_menu set 1"}}]
+scoreboard objectives remove player_2_menu
 scoreboard objectives add player_2_menu trigger ["",{"text":"[ Teleport To ]","color":"#10B3C9","clickEvent":{"action":"run_command","value":"/trigger teleport set 2"}}]
 team add player_3 ["",{"text":"[✌]","color":"#10B3C9"}]
 team modify player_3 prefix ["",{"text":"✌","color":"#10B3C9","clickEvent":{"action":"run_command","value":"/trigger player_3_menu set 1"}}]
+scoreboard objectives remove player_3_menu
 scoreboard objectives add player_3_menu trigger ["",{"text":"[ Teleport To ]","color":"#10B3C9","clickEvent":{"action":"run_command","value":"/trigger teleport set 3"}}]
 team add player_4 ["",{"text":"[✌]","color":"#10B3C9"}]
 team modify player_4 prefix ["",{"text":"✌","color":"#10B3C9","clickEvent":{"action":"run_command","value":"/trigger player_4_menu set 1"}}]
+scoreboard objectives remove player_4_menu
 scoreboard objectives add player_4_menu trigger ["",{"text":"[ Teleport To ]","color":"#10B3C9","clickEvent":{"action":"run_command","value":"/trigger teleport set 4"}}]
 team add player_5 ["",{"text":"[✌]","color":"#10B3C9"}]
 team modify player_5 prefix ["",{"text":"✌","color":"#10B3C9","clickEvent":{"action":"run_command","value":"/trigger player_5_menu set 1"}}]
+scoreboard objectives remove player_5_menu
 scoreboard objectives add player_5_menu trigger ["",{"text":"[ Teleport To ]","color":"#10B3C9","clickEvent":{"action":"run_command","value":"/trigger teleport set 5"}}]
 team add player_6 ["",{"text":"[✌]","color":"#10B3C9"}]
 team modify player_6 prefix ["",{"text":"✌","color":"#10B3C9","clickEvent":{"action":"run_command","value":"/trigger player_6_menu set 1"}}]
+scoreboard objectives remove player_6_menu
 scoreboard objectives add player_6_menu trigger ["",{"text":"[ Teleport To ]","color":"#10B3C9","clickEvent":{"action":"run_command","value":"/trigger teleport set 6"}}]
 team add player_7 ["",{"text":"[✌]","color":"#10B3C9"}]
 team modify player_7 prefix ["",{"text":"✌","color":"#10B3C9","clickEvent":{"action":"run_command","value":"/trigger player_7_menu set 1"}}]
+scoreboard objectives remove player_7_menu
 scoreboard objectives add player_7_menu trigger ["",{"text":"[ Teleport To ]","color":"#10B3C9","clickEvent":{"action":"run_command","value":"/trigger teleport set 7"}}]
 team add player_8 ["",{"text":"[✌]","color":"#10B3C9"}]
 team modify player_8 prefix ["",{"text":"✌","color":"#10B3C9","clickEvent":{"action":"run_command","value":"/trigger player_8_menu set 1"}}]
+scoreboard objectives remove player_8_menu
 scoreboard objectives add player_8_menu trigger ["",{"text":"[ Teleport To ]","color":"#10B3C9","clickEvent":{"action":"run_command","value":"/trigger teleport set 8"}}]
 team add player_9 ["",{"text":"[✌]","color":"#10B3C9"}]
 team modify player_9 prefix ["",{"text":"✌","color":"#10B3C9","clickEvent":{"action":"run_command","value":"/trigger player_9_menu set 1"}}]
+scoreboard objectives remove player_9_menu
 scoreboard objectives add player_9_menu trigger ["",{"text":"[ Teleport To ]","color":"#10B3C9","clickEvent":{"action":"run_command","value":"/trigger teleport set 9"}}]
 team add player_10 ["",{"text":"[✌]","color":"#10B3C9"}]
 team modify player_10 prefix ["",{"text":"✌","color":"#10B3C9","clickEvent":{"action":"run_command","value":"/trigger player_10_menu set 1"}}]
+scoreboard objectives remove player_10_menu
 scoreboard objectives add player_10_menu trigger ["",{"text":"[ Teleport To ]","color":"#10B3C9","clickEvent":{"action":"run_command","value":"/trigger teleport set 10"}}]
 team add player_11 ["",{"text":"[✌]","color":"#10B3C9"}]
 team modify player_11 prefix ["",{"text":"✌","color":"#10B3C9","clickEvent":{"action":"run_command","value":"/trigger player_11_menu set 1"}}]
+scoreboard objectives remove player_11_menu
 scoreboard objectives add player_11_menu trigger ["",{"text":"[ Teleport To ]","color":"#10B3C9","clickEvent":{"action":"run_command","value":"/trigger teleport set 11"}}]
 team add player_12 ["",{"text":"[✌]","color":"#10B3C9"}]
 team modify player_12 prefix ["",{"text":"✌","color":"#10B3C9","clickEvent":{"action":"run_command","value":"/trigger player_12_menu set 1"}}]
+scoreboard objectives remove player_12_menu
 scoreboard objectives add player_12_menu trigger ["",{"text":"[ Teleport To ]","color":"#10B3C9","clickEvent":{"action":"run_command","value":"/trigger teleport set 12"}}]
 team add player_13 ["",{"text":"[✌]","color":"#10B3C9"}]
 team modify player_13 prefix ["",{"text":"✌","color":"#10B3C9","clickEvent":{"action":"run_command","value":"/trigger player_13_menu set 1"}}]
+scoreboard objectives remove player_13_menu
 scoreboard objectives add player_13_menu trigger ["",{"text":"[ Teleport To ]","color":"#10B3C9","clickEvent":{"action":"run_command","value":"/trigger teleport set 13"}}]
 team add player_14 ["",{"text":"[✌]","color":"#10B3C9"}]
 team modify player_14 prefix ["",{"text":"✌","color":"#10B3C9","clickEvent":{"action":"run_command","value":"/trigger player_14_menu set 1"}}]
+scoreboard objectives remove player_14_menu
 scoreboard objectives add player_14_menu trigger ["",{"text":"[ Teleport To ]","color":"#10B3C9","clickEvent":{"action":"run_command","value":"/trigger teleport set 14"}}]
 team add player_15 ["",{"text":"[✌]","color":"#10B3C9"}]
 team modify player_15 prefix ["",{"text":"✌","color":"#10B3C9","clickEvent":{"action":"run_command","value":"/trigger player_15_menu set 1"}}]
+scoreboard objectives remove player_15_menu
 scoreboard objectives add player_15_menu trigger ["",{"text":"[ Teleport To ]","color":"#10B3C9","clickEvent":{"action":"run_command","value":"/trigger teleport set 15"}}]
 team add player_16 ["",{"text":"[✌]","color":"#10B3C9"}]
 team modify player_16 prefix ["",{"text":"✌","color":"#10B3C9","clickEvent":{"action":"run_command","value":"/trigger player_16_menu set 1"}}]
+scoreboard objectives remove player_16_menu
 scoreboard objectives add player_16_menu trigger ["",{"text":"[ Teleport To ]","color":"#10B3C9","clickEvent":{"action":"run_command","value":"/trigger teleport set 16"}}]
 team add player_17 ["",{"text":"[✌]","color":"#10B3C9"}]
 team modify player_17 prefix ["",{"text":"✌","color":"#10B3C9","clickEvent":{"action":"run_command","value":"/trigger player_17_menu set 1"}}]
+scoreboard objectives remove player_17_menu
 scoreboard objectives add player_17_menu trigger ["",{"text":"[ Teleport To ]","color":"#10B3C9","clickEvent":{"action":"run_command","value":"/trigger teleport set 17"}}]
 team add player_18 ["",{"text":"[✌]","color":"#10B3C9"}]
 team modify player_18 prefix ["",{"text":"✌","color":"#10B3C9","clickEvent":{"action":"run_command","value":"/trigger player_18_menu set 1"}}]
+scoreboard objectives remove player_18_menu
 scoreboard objectives add player_18_menu trigger ["",{"text":"[ Teleport To ]","color":"#10B3C9","clickEvent":{"action":"run_command","value":"/trigger teleport set 18"}}]
 team add player_19 ["",{"text":"[✌]","color":"#10B3C9"}]
 team modify player_19 prefix ["",{"text":"✌","color":"#10B3C9","clickEvent":{"action":"run_command","value":"/trigger player_19_menu set 1"}}]
+scoreboard objectives remove player_19_menu
 scoreboard objectives add player_19_menu trigger ["",{"text":"[ Teleport To ]","color":"#10B3C9","clickEvent":{"action":"run_command","value":"/trigger teleport set 19"}}]
 team add player_20 ["",{"text":"[✌]","color":"#10B3C9"}]
 team modify player_20 prefix ["",{"text":"✌","color":"#10B3C9","clickEvent":{"action":"run_command","value":"/trigger player_20_menu set 1"}}]
+scoreboard objectives remove player_20_menu
 scoreboard objectives add player_20_menu trigger ["",{"text":"[ Teleport To ]","color":"#10B3C9","clickEvent":{"action":"run_command","value":"/trigger teleport set 20"}}]
 team add player_21 ["",{"text":"[✌]","color":"#10B3C9"}]
 team modify player_21 prefix ["",{"text":"✌","color":"#10B3C9","clickEvent":{"action":"run_command","value":"/trigger player_21_menu set 1"}}]
+scoreboard objectives remove player_21_menu
 scoreboard objectives add player_21_menu trigger ["",{"text":"[ Teleport To ]","color":"#10B3C9","clickEvent":{"action":"run_command","value":"/trigger teleport set 21"}}]
 team add player_22 ["",{"text":"[✌]","color":"#10B3C9"}]
 team modify player_22 prefix ["",{"text":"✌","color":"#10B3C9","clickEvent":{"action":"run_command","value":"/trigger player_22_menu set 1"}}]
+scoreboard objectives remove player_22_menu
 scoreboard objectives add player_22_menu trigger ["",{"text":"[ Teleport To ]","color":"#10B3C9","clickEvent":{"action":"run_command","value":"/trigger teleport set 22"}}]
 team add player_23 ["",{"text":"[✌]","color":"#10B3C9"}]
 team modify player_23 prefix ["",{"text":"✌","color":"#10B3C9","clickEvent":{"action":"run_command","value":"/trigger player_23_menu set 1"}}]
+scoreboard objectives remove player_23_menu
 scoreboard objectives add player_23_menu trigger ["",{"text":"[ Teleport To ]","color":"#10B3C9","clickEvent":{"action":"run_command","value":"/trigger teleport set 23"}}]
 team add player_24 ["",{"text":"[✌]","color":"#10B3C9"}]
 team modify player_24 prefix ["",{"text":"✌","color":"#10B3C9","clickEvent":{"action":"run_command","value":"/trigger player_24_menu set 1"}}]
+scoreboard objectives remove player_24_menu
 scoreboard objectives add player_24_menu trigger ["",{"text":"[ Teleport To ]","color":"#10B3C9","clickEvent":{"action":"run_command","value":"/trigger teleport set 24"}}]
 team add player_25 ["",{"text":"[✌]","color":"#10B3C9"}]
 team modify player_25 prefix ["",{"text":"✌","color":"#10B3C9","clickEvent":{"action":"run_command","value":"/trigger player_25_menu set 1"}}]
+scoreboard objectives remove player_25_menu
 scoreboard objectives add player_25_menu trigger ["",{"text":"[ Teleport To ]","color":"#10B3C9","clickEvent":{"action":"run_command","value":"/trigger teleport set 25"}}]
 team add player_26 ["",{"text":"[✌]","color":"#10B3C9"}]
 team modify player_26 prefix ["",{"text":"✌","color":"#10B3C9","clickEvent":{"action":"run_command","value":"/trigger player_26_menu set 1"}}]
+scoreboard objectives remove player_26_menu
 scoreboard objectives add player_26_menu trigger ["",{"text":"[ Teleport To ]","color":"#10B3C9","clickEvent":{"action":"run_command","value":"/trigger teleport set 26"}}]
 team add player_27 ["",{"text":"[✌]","color":"#10B3C9"}]
 team modify player_27 prefix ["",{"text":"✌","color":"#10B3C9","clickEvent":{"action":"run_command","value":"/trigger player_27_menu set 1"}}]
+scoreboard objectives remove player_27_menu
 scoreboard objectives add player_27_menu trigger ["",{"text":"[ Teleport To ]","color":"#10B3C9","clickEvent":{"action":"run_command","value":"/trigger teleport set 27"}}]
 team add player_28 ["",{"text":"[✌]","color":"#10B3C9"}]
 team modify player_28 prefix ["",{"text":"✌","color":"#10B3C9","clickEvent":{"action":"run_command","value":"/trigger player_28_menu set 1"}}]
+scoreboard objectives remove player_28_menu
 scoreboard objectives add player_28_menu trigger ["",{"text":"[ Teleport To ]","color":"#10B3C9","clickEvent":{"action":"run_command","value":"/trigger teleport set 28"}}]
 team add player_29 ["",{"text":"[✌]","color":"#10B3C9"}]
 team modify player_29 prefix ["",{"text":"✌","color":"#10B3C9","clickEvent":{"action":"run_command","value":"/trigger player_29_menu set 1"}}]
+scoreboard objectives remove player_29_menu
 scoreboard objectives add player_29_menu trigger ["",{"text":"[ Teleport To ]","color":"#10B3C9","clickEvent":{"action":"run_command","value":"/trigger teleport set 29"}}]
 team add player_30 ["",{"text":"[✌]","color":"#10B3C9"}]
 team modify player_30 prefix ["",{"text":"✌","color":"#10B3C9","clickEvent":{"action":"run_command","value":"/trigger player_30_menu set 1"}}]
+scoreboard objectives remove player_30_menu
 scoreboard objectives add player_30_menu trigger ["",{"text":"[ Teleport To ]","color":"#10B3C9","clickEvent":{"action":"run_command","value":"/trigger teleport set 30"}}]
 team add player_31 ["",{"text":"[✌]","color":"#10B3C9"}]
 team modify player_31 prefix ["",{"text":"✌","color":"#10B3C9","clickEvent":{"action":"run_command","value":"/trigger player_31_menu set 1"}}]
+scoreboard objectives remove player_31_menu
 scoreboard objectives add player_31_menu trigger ["",{"text":"[ Teleport To ]","color":"#10B3C9","clickEvent":{"action":"run_command","value":"/trigger teleport set 31"}}]
 team add player_32 ["",{"text":"[✌]","color":"#10B3C9"}]
 team modify player_32 prefix ["",{"text":"✌","color":"#10B3C9","clickEvent":{"action":"run_command","value":"/trigger player_32_menu set 1"}}]
+scoreboard objectives remove player_32_menu
 scoreboard objectives add player_32_menu trigger ["",{"text":"[ Teleport To ]","color":"#10B3C9","clickEvent":{"action":"run_command","value":"/trigger teleport set 32"}}]
 team add player_33 ["",{"text":"[✌]","color":"#10B3C9"}]
 team modify player_33 prefix ["",{"text":"✌","color":"#10B3C9","clickEvent":{"action":"run_command","value":"/trigger player_33_menu set 1"}}]
+scoreboard objectives remove player_33_menu
 scoreboard objectives add player_33_menu trigger ["",{"text":"[ Teleport To ]","color":"#10B3C9","clickEvent":{"action":"run_command","value":"/trigger teleport set 33"}}]
 team add player_34 ["",{"text":"[✌]","color":"#10B3C9"}]
 team modify player_34 prefix ["",{"text":"✌","color":"#10B3C9","clickEvent":{"action":"run_command","value":"/trigger player_34_menu set 1"}}]
+scoreboard objectives remove player_34_menu
 scoreboard objectives add player_34_menu trigger ["",{"text":"[ Teleport To ]","color":"#10B3C9","clickEvent":{"action":"run_command","value":"/trigger teleport set 34"}}]
 team add player_35 ["",{"text":"[✌]","color":"#10B3C9"}]
 team modify player_35 prefix ["",{"text":"✌","color":"#10B3C9","clickEvent":{"action":"run_command","value":"/trigger player_35_menu set 1"}}]
+scoreboard objectives remove player_35_menu
 scoreboard objectives add player_35_menu trigger ["",{"text":"[ Teleport To ]","color":"#10B3C9","clickEvent":{"action":"run_command","value":"/trigger teleport set 35"}}]
 team add player_36 ["",{"text":"[✌]","color":"#10B3C9"}]
 team modify player_36 prefix ["",{"text":"✌","color":"#10B3C9","clickEvent":{"action":"run_command","value":"/trigger player_36_menu set 1"}}]
+scoreboard objectives remove player_36_menu
 scoreboard objectives add player_36_menu trigger ["",{"text":"[ Teleport To ]","color":"#10B3C9","clickEvent":{"action":"run_command","value":"/trigger teleport set 36"}}]
 team add player_37 ["",{"text":"[✌]","color":"#10B3C9"}]
 team modify player_37 prefix ["",{"text":"✌","color":"#10B3C9","clickEvent":{"action":"run_command","value":"/trigger player_37_menu set 1"}}]
+scoreboard objectives remove player_37_menu
 scoreboard objectives add player_37_menu trigger ["",{"text":"[ Teleport To ]","color":"#10B3C9","clickEvent":{"action":"run_command","value":"/trigger teleport set 37"}}]
 team add player_38 ["",{"text":"[✌]","color":"#10B3C9"}]
 team modify player_38 prefix ["",{"text":"✌","color":"#10B3C9","clickEvent":{"action":"run_command","value":"/trigger player_38_menu set 1"}}]
+scoreboard objectives remove player_38_menu
 scoreboard objectives add player_38_menu trigger ["",{"text":"[ Teleport To ]","color":"#10B3C9","clickEvent":{"action":"run_command","value":"/trigger teleport set 38"}}]
 team add player_39 ["",{"text":"[✌]","color":"#10B3C9"}]
 team modify player_39 prefix ["",{"text":"✌","color":"#10B3C9","clickEvent":{"action":"run_command","value":"/trigger player_39_menu set 1"}}]
+scoreboard objectives remove player_39_menu
 scoreboard objectives add player_39_menu trigger ["",{"text":"[ Teleport To ]","color":"#10B3C9","clickEvent":{"action":"run_command","value":"/trigger teleport set 39"}}]
 team add player_40 ["",{"text":"[✌]","color":"#10B3C9"}]
 team modify player_40 prefix ["",{"text":"✌","color":"#10B3C9","clickEvent":{"action":"run_command","value":"/trigger player_40_menu set 1"}}]
+scoreboard objectives remove player_40_menu
 scoreboard objectives add player_40_menu trigger ["",{"text":"[ Teleport To ]","color":"#10B3C9","clickEvent":{"action":"run_command","value":"/trigger teleport set 40"}}]
 team add player_41 ["",{"text":"[✌]","color":"#10B3C9"}]
 team modify player_41 prefix ["",{"text":"✌","color":"#10B3C9","clickEvent":{"action":"run_command","value":"/trigger player_41_menu set 1"}}]
+scoreboard objectives remove player_41_menu
 scoreboard objectives add player_41_menu trigger ["",{"text":"[ Teleport To ]","color":"#10B3C9","clickEvent":{"action":"run_command","value":"/trigger teleport set 41"}}]
 team add player_42 ["",{"text":"[✌]","color":"#10B3C9"}]
 team modify player_42 prefix ["",{"text":"✌","color":"#10B3C9","clickEvent":{"action":"run_command","value":"/trigger player_42_menu set 1"}}]
+scoreboard objectives remove player_42_menu
 scoreboard objectives add player_42_menu trigger ["",{"text":"[ Teleport To ]","color":"#10B3C9","clickEvent":{"action":"run_command","value":"/trigger teleport set 42"}}]
 team add player_43 ["",{"text":"[✌]","color":"#10B3C9"}]
 team modify player_43 prefix ["",{"text":"✌","color":"#10B3C9","clickEvent":{"action":"run_command","value":"/trigger player_43_menu set 1"}}]
+scoreboard objectives remove player_43_menu
 scoreboard objectives add player_43_menu trigger ["",{"text":"[ Teleport To ]","color":"#10B3C9","clickEvent":{"action":"run_command","value":"/trigger teleport set 43"}}]
 team add player_44 ["",{"text":"[✌]","color":"#10B3C9"}]
 team modify player_44 prefix ["",{"text":"✌","color":"#10B3C9","clickEvent":{"action":"run_command","value":"/trigger player_44_menu set 1"}}]
+scoreboard objectives remove player_44_menu
 scoreboard objectives add player_44_menu trigger ["",{"text":"[ Teleport To ]","color":"#10B3C9","clickEvent":{"action":"run_command","value":"/trigger teleport set 44"}}]
 team add player_45 ["",{"text":"[✌]","color":"#10B3C9"}]
 team modify player_45 prefix ["",{"text":"✌","color":"#10B3C9","clickEvent":{"action":"run_command","value":"/trigger player_45_menu set 1"}}]
+scoreboard objectives remove player_45_menu
 scoreboard objectives add player_45_menu trigger ["",{"text":"[ Teleport To ]","color":"#10B3C9","clickEvent":{"action":"run_command","value":"/trigger teleport set 45"}}]
 team add player_46 ["",{"text":"[✌]","color":"#10B3C9"}]
 team modify player_46 prefix ["",{"text":"✌","color":"#10B3C9","clickEvent":{"action":"run_command","value":"/trigger player_46_menu set 1"}}]
+scoreboard objectives remove player_46_menu
 scoreboard objectives add player_46_menu trigger ["",{"text":"[ Teleport To ]","color":"#10B3C9","clickEvent":{"action":"run_command","value":"/trigger teleport set 46"}}]
 team add player_47 ["",{"text":"[✌]","color":"#10B3C9"}]
 team modify player_47 prefix ["",{"text":"✌","color":"#10B3C9","clickEvent":{"action":"run_command","value":"/trigger player_47_menu set 1"}}]
+scoreboard objectives remove player_47_menu
 scoreboard objectives add player_47_menu trigger ["",{"text":"[ Teleport To ]","color":"#10B3C9","clickEvent":{"action":"run_command","value":"/trigger teleport set 47"}}]
 team add player_48 ["",{"text":"[✌]","color":"#10B3C9"}]
 team modify player_48 prefix ["",{"text":"✌","color":"#10B3C9","clickEvent":{"action":"run_command","value":"/trigger player_48_menu set 1"}}]
+scoreboard objectives remove player_48_menu
 scoreboard objectives add player_48_menu trigger ["",{"text":"[ Teleport To ]","color":"#10B3C9","clickEvent":{"action":"run_command","value":"/trigger teleport set 48"}}]
 team add player_49 ["",{"text":"[✌]","color":"#10B3C9"}]
 team modify player_49 prefix ["",{"text":"✌","color":"#10B3C9","clickEvent":{"action":"run_command","value":"/trigger player_49_menu set 1"}}]
+scoreboard objectives remove player_49_menu
 scoreboard objectives add player_49_menu trigger ["",{"text":"[ Teleport To ]","color":"#10B3C9","clickEvent":{"action":"run_command","value":"/trigger teleport set 49"}}]
 team add player_50 ["",{"text":"[✌]","color":"#10B3C9"}]
 team modify player_50 prefix ["",{"text":"✌","color":"#10B3C9","clickEvent":{"action":"run_command","value":"/trigger player_50_menu set 1"}}]
+scoreboard objectives remove player_50_menu
 scoreboard objectives add player_50_menu trigger ["",{"text":"[ Teleport To ]","color":"#10B3C9","clickEvent":{"action":"run_command","value":"/trigger teleport set 50"}}]
 team add player_51 ["",{"text":"[✌]","color":"#10B3C9"}]
 team modify player_51 prefix ["",{"text":"✌","color":"#10B3C9","clickEvent":{"action":"run_command","value":"/trigger player_51_menu set 1"}}]
+scoreboard objectives remove player_51_menu
 scoreboard objectives add player_51_menu trigger ["",{"text":"[ Teleport To ]","color":"#10B3C9","clickEvent":{"action":"run_command","value":"/trigger teleport set 51"}}]
 team add player_52 ["",{"text":"[✌]","color":"#10B3C9"}]
 team modify player_52 prefix ["",{"text":"✌","color":"#10B3C9","clickEvent":{"action":"run_command","value":"/trigger player_52_menu set 1"}}]
+scoreboard objectives remove player_52_menu
 scoreboard objectives add player_52_menu trigger ["",{"text":"[ Teleport To ]","color":"#10B3C9","clickEvent":{"action":"run_command","value":"/trigger teleport set 52"}}]
 team add player_53 ["",{"text":"[✌]","color":"#10B3C9"}]
 team modify player_53 prefix ["",{"text":"✌","color":"#10B3C9","clickEvent":{"action":"run_command","value":"/trigger player_53_menu set 1"}}]
+scoreboard objectives remove player_53_menu
 scoreboard objectives add player_53_menu trigger ["",{"text":"[ Teleport To ]","color":"#10B3C9","clickEvent":{"action":"run_command","value":"/trigger teleport set 53"}}]
 team add player_54 ["",{"text":"[✌]","color":"#10B3C9"}]
 team modify player_54 prefix ["",{"text":"✌","color":"#10B3C9","clickEvent":{"action":"run_command","value":"/trigger player_54_menu set 1"}}]
+scoreboard objectives remove player_54_menu
 scoreboard objectives add player_54_menu trigger ["",{"text":"[ Teleport To ]","color":"#10B3C9","clickEvent":{"action":"run_command","value":"/trigger teleport set 54"}}]
 team add player_55 ["",{"text":"[✌]","color":"#10B3C9"}]
 team modify player_55 prefix ["",{"text":"✌","color":"#10B3C9","clickEvent":{"action":"run_command","value":"/trigger player_55_menu set 1"}}]
+scoreboard objectives remove player_55_menu
 scoreboard objectives add player_55_menu trigger ["",{"text":"[ Teleport To ]","color":"#10B3C9","clickEvent":{"action":"run_command","value":"/trigger teleport set 55"}}]
 team add player_56 ["",{"text":"[✌]","color":"#10B3C9"}]
 team modify player_56 prefix ["",{"text":"✌","color":"#10B3C9","clickEvent":{"action":"run_command","value":"/trigger player_56_menu set 1"}}]
+scoreboard objectives remove player_56_menu
 scoreboard objectives add player_56_menu trigger ["",{"text":"[ Teleport To ]","color":"#10B3C9","clickEvent":{"action":"run_command","value":"/trigger teleport set 56"}}]
 team add player_57 ["",{"text":"[✌]","color":"#10B3C9"}]
 team modify player_57 prefix ["",{"text":"✌","color":"#10B3C9","clickEvent":{"action":"run_command","value":"/trigger player_57_menu set 1"}}]
+scoreboard objectives remove player_57_menu
 scoreboard objectives add player_57_menu trigger ["",{"text":"[ Teleport To ]","color":"#10B3C9","clickEvent":{"action":"run_command","value":"/trigger teleport set 57"}}]
 team add player_58 ["",{"text":"[✌]","color":"#10B3C9"}]
 team modify player_58 prefix ["",{"text":"✌","color":"#10B3C9","clickEvent":{"action":"run_command","value":"/trigger player_58_menu set 1"}}]
+scoreboard objectives remove player_58_menu
 scoreboard objectives add player_58_menu trigger ["",{"text":"[ Teleport To ]","color":"#10B3C9","clickEvent":{"action":"run_command","value":"/trigger teleport set 58"}}]
 team add player_59 ["",{"text":"[✌]","color":"#10B3C9"}]
 team modify player_59 prefix ["",{"text":"✌","color":"#10B3C9","clickEvent":{"action":"run_command","value":"/trigger player_59_menu set 1"}}]
+scoreboard objectives remove player_59_menu
 scoreboard objectives add player_59_menu trigger ["",{"text":"[ Teleport To ]","color":"#10B3C9","clickEvent":{"action":"run_command","value":"/trigger teleport set 59"}}]
 team add player_60 ["",{"text":"[✌]","color":"#10B3C9"}]
 team modify player_60 prefix ["",{"text":"✌","color":"#10B3C9","clickEvent":{"action":"run_command","value":"/trigger player_60_menu set 1"}}]
+scoreboard objectives remove player_60_menu
 scoreboard objectives add player_60_menu trigger ["",{"text":"[ Teleport To ]","color":"#10B3C9","clickEvent":{"action":"run_command","value":"/trigger teleport set 60"}}]
 team add player_61 ["",{"text":"[✌]","color":"#10B3C9"}]
 team modify player_61 prefix ["",{"text":"✌","color":"#10B3C9","clickEvent":{"action":"run_command","value":"/trigger player_61_menu set 1"}}]
+scoreboard objectives remove player_61_menu
 scoreboard objectives add player_61_menu trigger ["",{"text":"[ Teleport To ]","color":"#10B3C9","clickEvent":{"action":"run_command","value":"/trigger teleport set 61"}}]
 team add player_62 ["",{"text":"[✌]","color":"#10B3C9"}]
 team modify player_62 prefix ["",{"text":"✌","color":"#10B3C9","clickEvent":{"action":"run_command","value":"/trigger player_62_menu set 1"}}]
+scoreboard objectives remove player_62_menu
 scoreboard objectives add player_62_menu trigger ["",{"text":"[ Teleport To ]","color":"#10B3C9","clickEvent":{"action":"run_command","value":"/trigger teleport set 62"}}]
 team add player_63 ["",{"text":"[✌]","color":"#10B3C9"}]
 team modify player_63 prefix ["",{"text":"✌","color":"#10B3C9","clickEvent":{"action":"run_command","value":"/trigger player_63_menu set 1"}}]
+scoreboard objectives remove player_63_menu
 scoreboard objectives add player_63_menu trigger ["",{"text":"[ Teleport To ]","color":"#10B3C9","clickEvent":{"action":"run_command","value":"/trigger teleport set 63"}}]
 team add player_64 ["",{"text":"[✌]","color":"#10B3C9"}]
 team modify player_64 prefix ["",{"text":"✌","color":"#10B3C9","clickEvent":{"action":"run_command","value":"/trigger player_64_menu set 1"}}]
+scoreboard objectives remove player_64_menu
 scoreboard objectives add player_64_menu trigger ["",{"text":"[ Teleport To ]","color":"#10B3C9","clickEvent":{"action":"run_command","value":"/trigger teleport set 64"}}]
 team add player_65 ["",{"text":"[✌]","color":"#10B3C9"}]
 team modify player_65 prefix ["",{"text":"✌","color":"#10B3C9","clickEvent":{"action":"run_command","value":"/trigger player_65_menu set 1"}}]
+scoreboard objectives remove player_65_menu
 scoreboard objectives add player_65_menu trigger ["",{"text":"[ Teleport To ]","color":"#10B3C9","clickEvent":{"action":"run_command","value":"/trigger teleport set 65"}}]
 team add player_66 ["",{"text":"[✌]","color":"#10B3C9"}]
 team modify player_66 prefix ["",{"text":"✌","color":"#10B3C9","clickEvent":{"action":"run_command","value":"/trigger player_66_menu set 1"}}]
+scoreboard objectives remove player_66_menu
 scoreboard objectives add player_66_menu trigger ["",{"text":"[ Teleport To ]","color":"#10B3C9","clickEvent":{"action":"run_command","value":"/trigger teleport set 66"}}]
 team add player_67 ["",{"text":"[✌]","color":"#10B3C9"}]
 team modify player_67 prefix ["",{"text":"✌","color":"#10B3C9","clickEvent":{"action":"run_command","value":"/trigger player_67_menu set 1"}}]
+scoreboard objectives remove player_67_menu
 scoreboard objectives add player_67_menu trigger ["",{"text":"[ Teleport To ]","color":"#10B3C9","clickEvent":{"action":"run_command","value":"/trigger teleport set 67"}}]
 team add player_68 ["",{"text":"[✌]","color":"#10B3C9"}]
 team modify player_68 prefix ["",{"text":"✌","color":"#10B3C9","clickEvent":{"action":"run_command","value":"/trigger player_68_menu set 1"}}]
+scoreboard objectives remove player_68_menu
 scoreboard objectives add player_68_menu trigger ["",{"text":"[ Teleport To ]","color":"#10B3C9","clickEvent":{"action":"run_command","value":"/trigger teleport set 68"}}]
 team add player_69 ["",{"text":"[✌]","color":"#10B3C9"}]
 team modify player_69 prefix ["",{"text":"✌","color":"#10B3C9","clickEvent":{"action":"run_command","value":"/trigger player_69_menu set 1"}}]
+scoreboard objectives remove player_69_menu
 scoreboard objectives add player_69_menu trigger ["",{"text":"[ Teleport To ]","color":"#10B3C9","clickEvent":{"action":"run_command","value":"/trigger teleport set 69"}}]
 team add player_70 ["",{"text":"[✌]","color":"#10B3C9"}]
 team modify player_70 prefix ["",{"text":"✌","color":"#10B3C9","clickEvent":{"action":"run_command","value":"/trigger player_70_menu set 1"}}]
+scoreboard objectives remove player_70_menu
 scoreboard objectives add player_70_menu trigger ["",{"text":"[ Teleport To ]","color":"#10B3C9","clickEvent":{"action":"run_command","value":"/trigger teleport set 70"}}]
 team add player_71 ["",{"text":"[✌]","color":"#10B3C9"}]
 team modify player_71 prefix ["",{"text":"✌","color":"#10B3C9","clickEvent":{"action":"run_command","value":"/trigger player_71_menu set 1"}}]
+scoreboard objectives remove player_71_menu
 scoreboard objectives add player_71_menu trigger ["",{"text":"[ Teleport To ]","color":"#10B3C9","clickEvent":{"action":"run_command","value":"/trigger teleport set 71"}}]
 team add player_2 ["",{"text":"[✌]","color":"#10B3C9"}]
 team modify player_2 prefix ["",{"text":"✌","color":"#10B3C9","clickEvent":{"action":"run_command","value":"/trigger player_2_menu set 1"}}]
