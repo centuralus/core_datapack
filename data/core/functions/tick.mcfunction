@@ -8,7 +8,7 @@ execute if entity @p run function core:trade/tick
 
 execute if entity @p[team=operator,tag=operator] as @a[team=operator,tag=operator] run function core:operator/tick
 execute if entity @p run function core:player/tick
-execute if entity @p run function core:hostile/tick
+#execute if entity @p run function core:hostile/tick
 
 execute if entity @p run function core:logout/tick
 execute if entity @p run function core:protected/tick
