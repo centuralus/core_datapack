@@ -41,7 +41,7 @@ execute if entity @s[scores={team_color=17}] run team modify player_10 color yel
 execute if entity @p[tag=player_10_menu,team=player_10] as @a[tag=player_10_menu,team=player_10] run tellraw @s ["",{"text":"Personal Menu"}]
 execute if entity @p[tag=player_10_menu,team=player_10] as @a[tag=player_10_menu,team=player_10] run function core:player/players/player_10/personal_menu
 #
-execute if entity @p[tag=player_10_menu,team=!player_10] as @a[tag=player_10_menu,team=!player_10] run tellraw @s ["",{"text":"[ Teleport To ]","color":"#10B3C9","clickEvent":{"action":"run_command","value":"/trigger teleport set 10"}}]
+execute if entity @p[tag=player_10_menu,team=!player_10] as @a[tag=player_10_menu,team=!player_10] run tellraw @s ["",{"text":"[ Teleport To ","color":"#10B3C9","clickEvent":{"action":"run_command","value":"/trigger teleport set 10"}},{"selector":"@p[scores={teleport_unique=10}]","clickEvent":{"action":"run_command","value":"/trigger teleport set 10"}},{"text":" ]","color":"#10B3C9","clickEvent":{"action":"run_command","value":"/trigger teleport set 10"}}]
 execute if entity @p[tag=player_10_menu] as @a[tag=player_10_menu] run tag @s remove player_10_menu
 execute if entity @p[tag=reset_player_10_menu] as @a[tag=reset_player_10_menu] run scoreboard players reset @s player_10_menu
 execute if entity @p[tag=reset_player_10_menu] as @a[tag=reset_player_10_menu] run tag @s remove reset_player_10_menu
