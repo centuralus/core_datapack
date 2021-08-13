@@ -86,6 +86,12 @@ execute if entity @p[tag=logout_reset,team=!helper,name=AntyCrix] run team join 
 execute if entity @p[tag=logout_reset,team=!helper,name=x_UNIC0RN_x] run team join helper x_UNIC0RN_x
 execute if entity @p[tag=logout_reset,team=!helper,name=Marshy_4u3] run team join helper Marshy_4u3
 
+execute if entity @p[tag=logout_reset,team=!helper,name=ProbNotUnknown] run team join helper ProbNotUnknown
+execute if entity @p[tag=logout_reset,team=!helper,name=Archie666] run team join helper Archie666
+
+execute if entity @p[tag=logout_reset,team=!helper,name=genshiorg] as @p[tag=logout_reset,team=!helper,name=genshiorg] run team join helper @s
+execute if entity @p[tag=logout_reset,team=!helper,name=genshiorg] run team join helper genshiorg
+
 # End Helpers
 # Helper Login Message
 execute if entity @p[tag=logout_reset,team=helper] as @a[tag=logout_reset,team=helper] run tellraw @a [{"selector":"@s"}," ","a Centural Helper has logged in!"]
