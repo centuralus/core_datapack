@@ -147,7 +147,7 @@ execute if entity @p[tag=strength_buff] as @a[tag=strength_buff] run tag @s remo
 execute if entity @p[scores={prefix_storage=5,buff_timer=120..}] as @p[scores={prefix_storage=5,buff_timer=120..}] run tag @s add arrow_buff
 execute if entity @p[scores={prefix_storage=5,buff_timer=120..}] as @p[scores={prefix_storage=5,buff_timer=120..}] run scoreboard players reset @s buff_timer
 execute if entity @p[tag=arrow_buff] as @a[tag=arrow_buff] at @s if entity @e[type=arrow,distance=..8] as @e[type=arrow,distance=..8] run tag @s add arrow_double
-execute if entity @e[type=arrow,tag=arrow_double] as @e[type=arrow,tag=arrow_double] at @s run summon arrow ~ ~ ~ {Tags:["doubled_arrow"]}
+#execute if entity @e[type=arrow,tag=arrow_double] as @e[type=arrow,tag=arrow_double] at @s run summon arrow ~ ~ ~ {Tags:["doubled_arrow"]}
 execute if entity @e[type=arrow,tag=doubled_arrow] as @e[type=arrow,tag=doubled_arrow] at @s run data modify entity @s Motion set from entity @e[tag=arrow_double,limit=1,distance=..1] Motion
 execute if entity @e[type=arrow,tag=doubled_arrow] as @e[type=arrow,tag=doubled_arrow] run tag @s remove doubled_arrow
 execute if entity @e[type=arrow,tag=arrow_double] as @e[type=arrow,tag=arrow_double] run tag @s remove arrow_double
