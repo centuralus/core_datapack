@@ -111,3 +111,17 @@ execute if entity @p[tag=reset_prefix] as @a[tag=reset_prefix] run tag @s remove
 
 execute if entity @p[tag=reset_team_color] as @a[tag=reset_team_color] run scoreboard players reset @s team_color
 execute if entity @p[tag=reset_team_color] as @a[tag=reset_team_color] run tag @s remove reset_team_color
+
+
+
+
+#Preffix Buffs
+execute if entity @p[scores={prefix_storage=2,buff_timer=120..}] as @p[scores={prefix_storage=2,buff_timer=120..}] run tag @s add flame_buff
+execute if entity @p[scores={prefix_storage=2,buff_timer=120..}] as @p[scores={prefix_storage=2,buff_timer=120..}] run scoreboard players reset @s buff_timer
+
+#flame buff
+execute if entity @p[tag=flame_buff] as @a[tag=flame_buff] run effect give @s minecraft:fire_resistance 8 1 true
+execute if entity @p[tag=flame_buff] as @a[tag=flame_buff] at @s run function core:partice/test
+execute if entity @p[tag=flame_buff] as @a[tag=flame_buff] run tag @s remove flame_buff
+
+#End Prefix Buffs
