@@ -1,5 +1,4 @@
 #Particles Generated with: Cloud Wolf's Particle Grapher
-particle dripping_water ^0.000 ^NaN ^NaN 0 0 0 0 1 force @a
 particle dripping_water ^0.016 ^4.240 ^3.225 0 0 0 0 1 force @a
 particle dripping_water ^0.031 ^2.630 ^1.599 0 0 0 0 1 force @a
 particle dripping_water ^0.047 ^2.341 ^1.293 0 0 0 0 1 force @a
