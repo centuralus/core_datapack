@@ -129,7 +129,7 @@ execute if entity @p[tag=flame_buff] as @a[tag=flame_buff] run tag @s remove fla
 execute if entity @p[scores={prefix_storage=3,buff_timer=220..}] as @p[scores={prefix_storage=3,buff_timer=220..}] run tag @s add water_buff
 execute if entity @p[scores={prefix_storage=3,buff_timer=220..}] as @p[scores={prefix_storage=3,buff_timer=220..}] run scoreboard players reset @s buff_timer
 execute if entity @p[tag=water_buff] as @a[tag=water_buff] run effect give @s minecraft:conduit_power 7 1 true
-execute if entity @p[tag=water_buff] as @a[tag=water_buff] at @s run function core:particle/water_buff
+execute if entity @p[tag=water_buff] as @a[tag=water_buff] at @s positioned ~ ~2 ~ run function core:particle/water_buff
 execute if entity @p[tag=water_buff] as @a[tag=water_buff] run tag @s remove water_buff
 
 #strength buff
