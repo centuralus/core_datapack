@@ -122,7 +122,7 @@ execute if entity @p[tag=reset_team_color] as @a[tag=reset_team_color] run tag @
 execute if entity @p[scores={prefix_storage=2,buff_timer=220..}] as @p[scores={prefix_storage=2,buff_timer=220..}] run tag @s add flame_buff
 execute if entity @p[scores={prefix_storage=2,buff_timer=220..}] as @p[scores={prefix_storage=2,buff_timer=220..}] run scoreboard players reset @s buff_timer
 execute if entity @p[tag=flame_buff] as @a[tag=flame_buff] run effect give @s minecraft:fire_resistance 8 1 true
-execute if entity @p[tag=flame_buff] as @a[tag=flame_buff] at @s positioned ~ ~3 ~ run function core:partice/flame_buff
+execute if entity @p[tag=flame_buff] as @a[tag=flame_buff] at @s positioned ~ ~3 ~ run function core:particle/flame_buff
 execute if entity @p[tag=flame_buff] as @a[tag=flame_buff] run title @s actionbar {"text":"🔥","color":"#F7630C"}
 execute if entity @p[tag=flame_buff] as @a[tag=flame_buff] run tag @s remove flame_buff
 
