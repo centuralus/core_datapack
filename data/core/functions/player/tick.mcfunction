@@ -116,12 +116,28 @@ execute if entity @p[tag=reset_team_color] as @a[tag=reset_team_color] run tag @
 
 
 #Preffix Buffs
-execute if entity @p[scores={prefix_storage=2,buff_timer=120..}] as @p[scores={prefix_storage=2,buff_timer=120..}] run tag @s add flame_buff
-execute if entity @p[scores={prefix_storage=2,buff_timer=120..}] as @p[scores={prefix_storage=2,buff_timer=120..}] run scoreboard players reset @s buff_timer
+
 
 #flame buff
+execute if entity @p[scores={prefix_storage=2,buff_timer=220..}] as @p[scores={prefix_storage=2,buff_timer=220..}] run tag @s add flame_buff
+execute if entity @p[scores={prefix_storage=2,buff_timer=220..}] as @p[scores={prefix_storage=2,buff_timer=220..}] run scoreboard players reset @s buff_timer
 execute if entity @p[tag=flame_buff] as @a[tag=flame_buff] run effect give @s minecraft:fire_resistance 8 1 true
-execute if entity @p[tag=flame_buff] as @a[tag=flame_buff] at @s run function core:partice/test
+execute if entity @p[tag=flame_buff] as @a[tag=flame_buff] at @s run function core:partice/flame_buff
 execute if entity @p[tag=flame_buff] as @a[tag=flame_buff] run tag @s remove flame_buff
 
+#water buff
+execute if entity @p[scores={prefix_storage=3,buff_timer=220..}] as @p[scores={prefix_storage=3,buff_timer=220..}] run tag @s add water_buff
+execute if entity @p[scores={prefix_storage=3,buff_timer=220..}] as @p[scores={prefix_storage=3,buff_timer=220..}] run scoreboard players reset @s buff_timer
+execute if entity @p[tag=water_buff] as @a[tag=water_buff] run effect give @s minecraft:conduit_power 7 1 true
+execute if entity @p[tag=water_buff] as @a[tag=water_buff] at @s run function core:particle/water_buff
+execute if entity @p[tag=water_buff] as @a[tag=water_buff] run tag @s remove water_buff
+
+#strength buff
+execute if entity @p[scores={prefix_storage=4,buff_timer=220..}] as @p[scores={prefix_storage=4,buff_timer=220..}] run tag @s add strength_buff
+execute if entity @p[scores={prefix_storage=4,buff_timer=220..}] as @p[scores={prefix_storage=4,buff_timer=220..}] run scoreboard players reset @s buff_timer
+execute if entity @p[tag=strength_buff] as @a[tag=strength_buff] run effect give @s minecraft:strength 4 1 true
+execute if entity @p[tag=strength_buff] as @a[tag=strength_buff] at @s run function core:particle/strength_buff
+execute if entity @p[tag=strength_buff] as @a[tag=strength_buff] run tag @s remove strength_buff
+
+effect give @s minecraft:strength 4 1
 #End Prefix Buffs
