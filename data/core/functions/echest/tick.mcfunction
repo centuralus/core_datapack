@@ -5,7 +5,7 @@ execute if entity @p[scores={ender_chest=1}] as @a[scores={ender_chest=1}] if en
 execute if entity @p[scores={ender_chest=1}] as @a[scores={ender_chest=1}] unless entity @s[scores={echest_crafted=1..}] run tellraw @s {"text":"You must have crafted atleast one ender chest to use this feature. (You may have already made one in the past, please recraft one more to unlock this feature)","color":"yellow"}
 
 execute if entity @p[tag=drop_ender_chest] as @a[tag=drop_ender_chest] at @s run summon armor_stand ~ ~ ~ {Tags:["ender_chest"],Marker:1b,Invisible:1b,NoGravity:1b}
-execute if entity @p[tag=drop_ender_chest] as @a[tag=drop_ender_chest] at @s run setblock ~ ~ ~ ender_chest
+execute if entity @p[tag=drop_ender_chest] as @a[tag=drop_ender_chest] at @s run fill ~ ~ ~ ~ ~ ~ minecraft:ender_chest replace air
 execute if entity @p[tag=drop_ender_chest] as @a[tag=drop_ender_chest] at @s run scoreboard players add @s echest_usage 1
 
 execute if entity @p[tag=drop_ender_chest] as @a[tag=drop_ender_chest] run tag @s remove drop_ender_chest
