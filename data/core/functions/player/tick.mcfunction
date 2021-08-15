@@ -146,11 +146,18 @@ execute if entity @p[tag=strength_buff] as @a[tag=strength_buff] run tag @s remo
 #strength buff
 execute if entity @p[scores={prefix_storage=5,buff_timer=120..}] as @p[scores={prefix_storage=5,buff_timer=120..}] run tag @s add arrow_buff
 execute if entity @p[scores={prefix_storage=5,buff_timer=120..}] as @p[scores={prefix_storage=5,buff_timer=120..}] run scoreboard players reset @s buff_timer
-execute if entity @p[tag=arrow_buff] as @a[tag=arrow_buff] at @s if entity @e[type=arrow,distance=..8] as @e[type=arrow,distance=..8] run tag @s add arrow_double
-#execute if entity @e[type=arrow,tag=arrow_double] as @e[type=arrow,tag=arrow_double] at @s run summon arrow ~ ~ ~ {Tags:["doubled_arrow"]}
-execute if entity @e[type=arrow,tag=doubled_arrow] as @e[type=arrow,tag=doubled_arrow] at @s run data modify entity @s Motion set from entity @e[tag=arrow_double,limit=1,distance=..1] Motion
-execute if entity @e[type=arrow,tag=doubled_arrow] as @e[type=arrow,tag=doubled_arrow] run tag @s remove doubled_arrow
-execute if entity @e[type=arrow,tag=arrow_double] as @e[type=arrow,tag=arrow_double] run tag @s remove arrow_double
+
+execute if entity @p[tag=arrow_buff] as @p[tag=arrow_buff] run scoreboard players reset @s arrow_count
+
+execute if entity @p[tag=arrow_buff] as @p[tag=arrow_buff] at @s if entity @e[type=arrow,distance=..8,nbt={inGround:1b}] as @e[type=arrow,distance=..8,nbt={inGround:1b}] at @s run scoreboard players add @p[tag=arrow_buff] arrow_count
+execute if entity @p[tag=arrow_buff] as @p[tag=arrow_buff] at @s if entity @e[type=arrow,distance=..8,nbt={inGround:1b}] as @e[type=arrow,distance=..8,nbt={inGround:1b}] at @s run kill @e[type=arrow,distance=..8,nbt={inGround:1b}]
+
+
+execute if entity @p[tag=arrow_buff] as @a[tag=arrow_buff] run summon item ~ ~ ~ {Tags:["arrow_pickup"],PickupDelay:32767,Item:{id:"minecraft:arrow",Count:1b}}
+execute if entity @e[tag=arrow_pickup] as @e[tag=arrow_pickup] at @s store result entity @s Count byte 1 run scoreboard players get @p[tag=arrow_buff] arrow_count
+execute if entity @e[tag=arrow_pickup] as @e[tag=arrow_pickup] at @s run data modify entity @s PickupDelay set value -1
+execute if entity @e[tag=arrow_pickup] as @e[tag=arrow_pickup] run tag @s remove arrow_pickup
+
 
 execute if entity @p[tag=arrow_buff] as @a[tag=arrow_buff] at @s positioned ~ ~3 ~ run function core:particle/arrow_buff
 execute if entity @p[tag=arrow_buff] as @a[tag=arrow_buff] run title @s actionbar {"text":"🏹","color":"#722D09"}
