@@ -172,4 +172,15 @@ execute if entity @p[tag=arrow_buff] as @a[tag=arrow_buff] at @s positioned ~ ~3
 execute if entity @p[tag=arrow_buff] as @a[tag=arrow_buff] run title @s actionbar {"text":"🏹","color":"#722D09"}
 execute if entity @p[tag=arrow_buff] as @a[tag=arrow_buff] run tag @s remove arrow_buff
 
+
+
+#lightning buff
+execute if entity @p[scores={prefix_storage=5,buff_timer=520..}] as @p[scores={prefix_storage=5,buff_timer=520..}] run tag @s add lightning_buff
+execute if entity @p[scores={prefix_storage=5,buff_timer=520..}] as @p[scores={prefix_storage=5,buff_timer=520..}] run scoreboard players reset @s buff_timer
+execute if entity @p[tag=lightning_buff] as @a[tag=lightning_buff] at @s positioned ^ ^3 ^ run summon lightning ~ ~ ~
+#execute if entity @p[tag=lightning_buff] as @a[tag=lightning_buff] at @s positioned ~ ~3 ~ run function core:particle/lightning_buff
+execute if entity @p[tag=lightning_buff] as @a[tag=lightning_buff] run title @s actionbar {"text":"⚡","color":"#FFC83D"}
+execute if entity @p[tag=lightning_buff] as @a[tag=lightning_buff] run tag @s remove lightning_buff
+
+
 #End Prefix Buffs
