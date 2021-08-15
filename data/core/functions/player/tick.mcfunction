@@ -122,9 +122,15 @@ execute if entity @p[tag=reset_team_color] as @a[tag=reset_team_color] run tag @
 execute if entity @p[scores={prefix_storage=2,buff_timer=220..}] as @p[scores={prefix_storage=2,buff_timer=220..}] run tag @s add flame_buff
 execute if entity @p[scores={prefix_storage=2,buff_timer=220..}] as @p[scores={prefix_storage=2,buff_timer=220..}] run scoreboard players reset @s buff_timer
 execute if entity @p[tag=flame_buff] as @a[tag=flame_buff] run effect give @s minecraft:fire_resistance 8 1 true
-execute if entity @p[tag=flame_buff] as @a[tag=flame_buff] at @s positioned ~ ~3 ~ run function core:particle/flame_buff
+
+execute if entity @p[tag=flame_buff] as @a[tag=flame_buff] at @s positioned ~ ~3 ~ run summon armor_stand ~ ~ ~ {Invisible:1b,Marker:1b,Tags:["flame_buff_animation"]}
+execute if entity @p[tag=flame_buff] as @a[tag=flame_buff] run tag @s add animate_flame_buff
 execute if entity @p[tag=flame_buff] as @a[tag=flame_buff] run title @s actionbar {"text":"🔥","color":"#F7630C"}
 execute if entity @p[tag=flame_buff] as @a[tag=flame_buff] run tag @s remove flame_buff
+
+execute if entity @p[tag=animate_flame_buff] as @a[tag=animate_flame_buff] at @s poisitioned ~ ~3 ~ run function core:animate/sphere/animate
+execute if entity @p[tag=animate_flame_buff,scores={animate_timer=120..}] as @a[tag=animate_flame_buff,scores={animate_timer=120..}] run tag @s remove animate_flame_buff
+
 
 #water buff
 execute if entity @p[scores={prefix_storage=3,buff_timer=220..}] as @p[scores={prefix_storage=3,buff_timer=220..}] run tag @s add water_buff
@@ -143,7 +149,7 @@ execute if entity @p[tag=strength_buff] as @a[tag=strength_buff] run title @s ac
 execute if entity @p[tag=strength_buff] as @a[tag=strength_buff] run tag @s remove strength_buff
 
 
-#strength buff
+#arrow buff
 execute if entity @p[scores={prefix_storage=5,buff_timer=120..}] as @p[scores={prefix_storage=5,buff_timer=120..}] run tag @s add arrow_buff
 execute if entity @p[scores={prefix_storage=5,buff_timer=120..}] as @p[scores={prefix_storage=5,buff_timer=120..}] run scoreboard players reset @s buff_timer
 
