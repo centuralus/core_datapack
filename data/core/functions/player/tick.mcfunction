@@ -149,7 +149,7 @@ execute if entity @p[scores={prefix_storage=5,buff_timer=120..}] as @p[scores={p
 
 execute if entity @p[tag=arrow_buff] as @p[tag=arrow_buff] run scoreboard players reset @s arrow_count
 
-execute if entity @p[tag=arrow_buff] as @p[tag=arrow_buff] at @s if entity @e[type=arrow,distance=..8,nbt={inGround:1b}] as @e[type=arrow,distance=..8,nbt={inGround:1b}] at @s run scoreboard players add @p[tag=arrow_buff] arrow_count
+execute if entity @p[tag=arrow_buff] as @p[tag=arrow_buff] at @s if entity @e[type=arrow,distance=..8,nbt={inGround:1b}] as @e[type=arrow,distance=..8,nbt={inGround:1b}] at @s run scoreboard players add @p[tag=arrow_buff] arrow_count 1
 execute if entity @p[tag=arrow_buff] as @p[tag=arrow_buff] at @s if entity @e[type=arrow,distance=..8,nbt={inGround:1b}] as @e[type=arrow,distance=..8,nbt={inGround:1b}] at @s run kill @e[type=arrow,distance=..8,nbt={inGround:1b}]
 
 
