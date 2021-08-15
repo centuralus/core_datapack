@@ -144,9 +144,9 @@ execute if entity @p[tag=water_buff] as @a[tag=water_buff] run title @s actionba
 execute if entity @p[tag=water_buff] as @a[tag=water_buff] run tag @s remove water_buff
 
 #strength buff
-execute if entity @p[scores={prefix_storage=4,buff_timer=220..}] as @p[scores={prefix_storage=4,buff_timer=220..}] run tag @s add strength_buff
-execute if entity @p[scores={prefix_storage=4,buff_timer=220..}] as @p[scores={prefix_storage=4,buff_timer=220..}] run scoreboard players reset @s buff_timer
-execute if entity @p[tag=strength_buff] as @a[tag=strength_buff] run effect give @s minecraft:strength 4 1 true
+execute if entity @p[scores={prefix_storage=4,buff_timer=270..}] as @p[scores={prefix_storage=4,buff_timer=270..}] run tag @s add strength_buff
+execute if entity @p[scores={prefix_storage=4,buff_timer=270..}] as @p[scores={prefix_storage=4,buff_timer=270..}] run scoreboard players reset @s buff_timer
+execute if entity @p[tag=strength_buff] as @a[tag=strength_buff] run effect give @s minecraft:strength 10 3 true
 execute if entity @p[tag=strength_buff] as @a[tag=strength_buff] at @s positioned ~ ~3 ~ run function core:particle/strength_buff
 execute if entity @p[tag=strength_buff] as @a[tag=strength_buff] run title @s actionbar {"text":"🗡","color":"#727273"}
 execute if entity @p[tag=strength_buff] as @a[tag=strength_buff] run tag @s remove strength_buff
