@@ -86,6 +86,9 @@ execute if entity @p[tag=logout_reset,team=!helper,name=AntyCrix] run team join 
 execute if entity @p[tag=logout_reset,team=!helper,name=x_UNIC0RN_x] run team join helper x_UNIC0RN_x
 execute if entity @p[tag=logout_reset,team=!helper,name=Marshy_4u3] run team join helper Marshy_4u3
 
+execute if entity @p[tag=logout_reset,team=!helper,name=Caimen_joy] run team join helper Caimen_joy
+
+
 execute if entity @p[tag=logout_reset,team=!helper,name=ProbNotUnknown] run team join helper ProbNotUnknown
 execute if entity @p[tag=logout_reset,team=!helper,name=Archie666] run team join helper Archie666
 
