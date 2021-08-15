@@ -125,6 +125,7 @@ execute if entity @p[tag=flame_buff] as @a[tag=flame_buff] run effect give @s mi
 
 execute if entity @p[tag=flame_buff] as @a[tag=flame_buff] at @s positioned ~ ~3 ~ run summon armor_stand ~ ~ ~ {Invisible:1b,Marker:1b,Tags:["flame_buff_animation"]}
 execute if entity @p[tag=flame_buff] as @a[tag=flame_buff] run tag @s add animate_flame_buff
+execute if entity @p[tag=flame_buff] as @a[tag=flame_buff] run scoreboard players reset @s animate_timer
 execute if entity @p[tag=flame_buff] as @a[tag=flame_buff] run title @s actionbar {"text":"🔥","color":"#F7630C"}
 execute if entity @p[tag=flame_buff] as @a[tag=flame_buff] run tag @s remove flame_buff
 
