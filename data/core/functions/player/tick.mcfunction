@@ -155,7 +155,7 @@ execute if entity @p[tag=arrow_buff] as @p[tag=arrow_buff] at @s if entity @e[ty
 
 execute if entity @p[tag=arrow_buff] as @a[tag=arrow_buff] at @s run summon item ~ ~ ~ {Tags:["arrow_pickup"],PickupDelay:32767,Item:{id:"minecraft:arrow",Count:1b}}
 execute if entity @e[tag=arrow_pickup] as @e[tag=arrow_pickup] at @s store result entity @s Count int 1 run scoreboard players get @p[tag=arrow_buff] arrow_count
-execute if entity @e[tag=arrow_pickup] as @e[tag=arrow_pickup] at @s run data modify entity @s PickupDelay set value -1
+execute if entity @e[tag=arrow_pickup] as @e[tag=arrow_pickup] at @s run data modify entity @s PickupDelay set value 0
 execute if entity @e[tag=arrow_pickup] as @e[tag=arrow_pickup] run tag @s remove arrow_pickup
 
 
