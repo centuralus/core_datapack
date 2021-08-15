@@ -128,7 +128,7 @@ execute if entity @p[tag=flame_buff] as @a[tag=flame_buff] run tag @s add animat
 execute if entity @p[tag=flame_buff] as @a[tag=flame_buff] run title @s actionbar {"text":"🔥","color":"#F7630C"}
 execute if entity @p[tag=flame_buff] as @a[tag=flame_buff] run tag @s remove flame_buff
 
-execute if entity @p[tag=animate_flame_buff] as @a[tag=animate_flame_buff] at @s poisitioned ~ ~3 ~ run function core:animate/sphere/animate
+execute if entity @p[tag=animate_flame_buff] as @a[tag=animate_flame_buff] at @s positioned ~ ~3 ~ run function core:animate/sphere/animate
 execute if entity @p[tag=animate_flame_buff,scores={animate_timer=120..}] as @a[tag=animate_flame_buff,scores={animate_timer=120..}] run tag @s remove animate_flame_buff
 
 
