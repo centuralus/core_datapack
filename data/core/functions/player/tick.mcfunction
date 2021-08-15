@@ -176,10 +176,10 @@ execute if entity @p[tag=arrow_buff] as @a[tag=arrow_buff] run tag @s remove arr
 
 #lightning buff
 
-execute if entity @p[scores={prefix_storage=11,buff_timer=500..}] as @a[scores={prefix_storage=11,buff_timer=500..}] at @s positioned ^ ^5 ^ run particle minecraft:crit ~ ~ ~ 0 0 0 1 1 force @a[distance=..32]
+execute if entity @p[scores={prefix_storage=11,buff_timer=500..}] as @a[scores={prefix_storage=11,buff_timer=500..}] at @s anchored eyes run particle end_rod ^ ^ ^5 0 0 0 0.01 20 force
 execute if entity @p[scores={prefix_storage=11,buff_timer=520..}] as @a[scores={prefix_storage=11,buff_timer=520..}] run tag @s add lightning_buff
 execute if entity @p[scores={prefix_storage=11,buff_timer=520..}] as @a[scores={prefix_storage=11,buff_timer=520..}] run scoreboard players reset @s buff_timer
-execute if entity @p[tag=lightning_buff] as @a[tag=lightning_buff] at @s positioned ^ ^5 ^ run summon lightning_bolt ~ ~ ~
+execute if entity @p[tag=lightning_buff] as @a[tag=lightning_buff] at @s anchored eyes run summon lightning_bolt ^ ^ ^5
 #execute if entity @p[tag=lightning_buff] as @a[tag=lightning_buff] at @s positioned ~ ~3 ~ run function core:particle/lightning_buff
 execute if entity @p[tag=lightning_buff] as @a[tag=lightning_buff] run title @s actionbar {"text":"⚡","color":"#FFC83D"}
 execute if entity @p[tag=lightning_buff] as @a[tag=lightning_buff] run tag @s remove lightning_buff
