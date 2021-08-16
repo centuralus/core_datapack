@@ -5,4 +5,3 @@ execute if score @s cw_particleplot matches 19 run function core:animate/star/fr
 execute if score @s cw_particleplot matches 20 run function core:animate/star/frames/f20
 execute if score @s cw_particleplot matches 21 run function core:animate/star/frames/f21
 execute if score @s cw_particleplot matches 22 run function core:animate/star/frames/f22
-execute if score @s cw_particleplot matches 23 run function core:animate/star/frames/f23
