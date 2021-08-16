@@ -7,7 +7,7 @@ execute if entity @p run function core:echest/tick
 execute if entity @p run function core:trade/tick
 
 execute if entity @p[team=operator,tag=operator] as @a[team=operator,tag=operator] run function core:operator/tick
-execute if entity @p run function core:player/tick
+#execute if entity @p run function core:player/tick
 #execute if entity @p run function core:hostile/tick
 
 execute if entity @p run function core:logout/tick
@@ -16,8 +16,6 @@ execute if entity @e[tag=kill,type=!player,tag=!keep] as @e[tag=kill,type=!playe
 execute if entity @p[team=away] run function core:away/tick
 #function core:duplicate/tick
 #function core:shop/tick
-
-execute if entity @p[tag=nbs_astheworld] run function core:music/as_the_world_falls_down/tick
 
 
 function core:phase/tick
