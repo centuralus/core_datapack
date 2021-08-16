@@ -1,9 +1,9 @@
 
-particle portal ^0.724 ^1.000 ^0.800 0 0 0 0 1 force @a
-particle portal ^0.660 ^1.000 ^0.895 0 0 0 0 1 force @a
-particle portal ^0.883 ^1.000 ^1.488 0 0 0 0 1 force @a
-particle portal ^0.611 ^1.000 ^1.314 0 0 0 0 1 force @a
-particle portal ^0.501 ^1.000 ^1.437 0 0 0 0 1 force @a
-particle portal ^0.175 ^1.000 ^0.731 0 0 0 0 1 force @a
-particle portal ^0.139 ^1.000 ^1.020 0 0 0 0 1 force @a
-particle portal ^0.051 ^1.000 ^1.443 0 0 0 0 1 force @a
+particle end_rod ^0.608 ^1.000 ^0.673 0 0 0 0 1 force @a
+particle end_rod ^0.497 ^1.000 ^0.674 0 0 0 0 1 force @a
+particle end_rod ^0.389 ^1.000 ^0.656 0 0 0 0 1 force @a
+particle end_rod ^0.513 ^1.000 ^1.103 0 0 0 0 1 force @a
+particle end_rod ^0.248 ^1.000 ^0.712 0 0 0 0 1 force @a
+particle end_rod ^0.408 ^1.000 ^1.702 0 0 0 0 1 force @a
+particle end_rod ^0.178 ^1.000 ^1.307 0 0 0 0 1 force @a
+particle end_rod ^0.059 ^1.000 ^1.658 0 0 0 0 1 force @a
