@@ -20,8 +20,8 @@ execute if entity @p[team=operator,tag=operator] as @a[team=operator,tag=operato
 execute if entity @p run function core:player/tick
 #execute if entity @p run function core:hostile/tick
 
-#execute if entity @p run function core:logout/tick
-#execute if entity @p run function core:protected/tick
+execute if entity @p run function core:logout/tick
+execute if entity @p run function core:protected/tick
 #execute if entity @e[tag=kill,type=!player,tag=!keep] as @e[tag=kill,type=!player,tag=!keep] run function core:kill/tick
 #execute if entity @p[team=away] run function core:away/tick
 #function core:duplicate/tick
