@@ -17,10 +17,10 @@ execute if entity @p[scores={spawn=1..}] as @a[scores={spawn=1..}] run scoreboar
 execute if entity @p[scores={spawn_timer=-80..-1}] as @a[scores={spawn_timer=-80..-1}] at @s anchored feet align x align y align z positioned ~.25 ~ ~.25 facing entity @s feet run function core:animate/teleport_spawn/animate
 
 
-execute if entity @p[tag=spawn,scores={spawn_timer=0..}] as @a[tag=spawn,scores={spawn_timer=0..}] run scoreboard players reset @s spawn
+#execute if entity @p[tag=spawn,scores={spawn_timer=0..}] as @a[tag=spawn,scores={spawn_timer=0..}] run scoreboard players reset @s spawn
 execute if entity @p[tag=spawn,scores={spawn_timer=0..}] as @a[tag=spawn,scores={spawn_timer=0..}] at @e[tag=spawn,type=armor_stand] in minecraft:overworld run tp @s ~ ~ ~
 execute if entity @p[tag=spawn,scores={spawn_timer=0..}] as @a[tag=spawn,scores={spawn_timer=0..}] at @e[tag=spawn,type=armor_stand] in minecraft:overworld run tag @s remove spawn
-#execute if entity @p[scores={spawn=1..}] as @a[scores={spawn=1..}] run scoreboard players reset @s spawn
+execute if entity @p[scores={spawn=1..}] as @a[scores={spawn=1..}] run scoreboard players reset @s spawn
 #execute in minecraft:spawn positioned 0 -1024 0 if entity @p[distance=..32] as @a[distance=..32] at @s if block ~ ~-1 ~ minecraft:smooth_quartz align x align y align z positioned ~.5 ~2.5 ~.5 unless entity @e[type=item,tag=icon,distance=..1] run summon item ~ ~ ~ {NoGravity:1b,Glowing:1b,CustomNameVisible:1b,Age:-32768,PickupDelay:32767,Tags:["icon"],Item:{id:"minecraft:small_amethyst_bud",Count:1b}}
 
 #execute in minecraft:spawn positioned 0 -1024 0 if entity @e[tag=icon] as @e[tag=icon] at @s positioned ~ ~-2.5 ~ if entity @p[distance=..1] at @p[distance=..1] run tp @s ~ ~2.5 ~
