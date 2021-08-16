@@ -210,6 +210,5 @@ execute if entity @p[tag=shield_buff] as @a[tag=shield_buff] run effect give @s 
 execute if entity @p[tag=shield_buff] as @a[tag=shield_buff] run title @s actionbar {"text":"⛨","color":"#F8F9FA"}
 execute if entity @p[tag=shield_buff] as @a[tag=shield_buff] run tag @s remove shield_buff
 
-effect give @s minecraft:resistance 10 1 true
 
 #End Prefix Buffs
