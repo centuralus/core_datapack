@@ -30,20 +30,20 @@ execute if entity @p run function core:player/tick
 
 #function core:phase/tick
 #function core:stream/tick
-#function core:barter/tick
+function core:barter/tick
 #function core:alpha/tick
 #function core:keep/tick
-#function core:difficulty/tick
-#function core:home/tick
-#function core:menu/tick
+function core:difficulty/tick
+function core:home/tick
+function core:menu/tick
 #function core:preload/tick
-#function core:teleport/tick
-#function core:team/tick
-#function core:return/tick
-#function core:wild/tick
-#function core:role/tick
-#function core:spawn/tick
-#function core:gamemode/tick
+function core:teleport/tick
+function core:team/tick
+function core:return/tick
+function core:wild/tick
+function core:role/tick
+function core:spawn/tick
+function core:gamemode/tick
 #execute if entity @p[tag=raycast] as @a[tag=raycast] at @a[tag=raycast] positioned ~ ~2 ~ run function core:raycast/tick
 #execute if entity @p[gamemode=adventure,team=player] at @a[gamemode=adventure,team=player] unless entity @e[tag=protected,type=armor_stand,distance=..64] run tellraw @s "You have now left the builder zone."
 #execute if entity @p[gamemode=adventure,team=player] at @a[gamemode=adventure,team=player] unless entity @e[tag=protected,type=armor_stand,distance=..64] run gamemode survival @s
