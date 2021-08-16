@@ -201,5 +201,13 @@ execute if entity @p[tag=heart_buff] as @a[tag=heart_buff] run effect give @s mi
 execute if entity @p[tag=heart_buff] as @a[tag=heart_buff] run title @s actionbar {"text":"❤","color":"#F03A17"}
 execute if entity @p[tag=heart_buff] as @a[tag=heart_buff] run tag @s remove heart_buff
 
+#shield_buff
+execute if entity @p[scores={prefix_storage=16,buff_timer=320..}] as @a[scores={prefix_storage=16,buff_timer=320..}] run tag @s add shield_buff
+execute if entity @p[scores={prefix_storage=16,buff_timer=320..}] as @a[scores={prefix_storage=16,buff_timer=320..}] run scoreboard players reset @s buff_timer
+execute if entity @p[tag=shield_buff] as @a[tag=shield_buff] run effect give @s minecraft:resistance 10 2 true
+execute if entity @p[tag=shield_buff] as @a[tag=shield_buff] run title @s actionbar {"text":"⛨","color":"#F8F9FA"}
+execute if entity @p[tag=shield_buff] as @a[tag=shield_buff] run tag @s remove shield_buff
+
+effect give @s minecraft:resistance 10 1 true
 
 #End Prefix Buffs
