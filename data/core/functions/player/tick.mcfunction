@@ -213,6 +213,16 @@ execute if entity @p[tag=shield_buff] as @a[tag=shield_buff] run tag @s remove s
 
 #speed_buff
 
+execute if entity @p[scores={prefix_storage=17,buff_timer=90..}] as @a[scores={prefix_storage=17,buff_timer=90..}] run tag @s add slow_falling_buff
+execute if entity @p[scores={prefix_storage=17,buff_timer=90..}] as @a[scores={prefix_storage=17,buff_timer=90..}] run scoreboard players reset @s buff_timer
+execute if entity @p[tag=slow_falling_buff] as @a[tag=slow_falling_buff] run effect give @s minecraft:slow_falling 3 1 true
+execute if entity @p[tag=slow_falling_buff] as @a[tag=slow_falling_buff] run title @s actionbar {"text":"☔","color":"#886CE4"}
+execute if entity @p[tag=slow_falling_buff] as @a[tag=slow_falling_buff] run tag @s remove slow_falling_buff
+
+
+
+#speed_buff
+
 execute if entity @p[scores={prefix_storage=18,buff_timer=220..}] as @a[scores={prefix_storage=18,buff_timer=220..}] run tag @s add speed_buff
 execute if entity @p[scores={prefix_storage=18,buff_timer=220..}] as @a[scores={prefix_storage=18,buff_timer=220..}] run scoreboard players reset @s buff_timer
 execute if entity @p[tag=speed_buff] as @a[tag=speed_buff] run effect give @s minecraft:speed 8 1 true
