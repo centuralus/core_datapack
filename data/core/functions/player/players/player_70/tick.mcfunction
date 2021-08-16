@@ -4,7 +4,7 @@ execute if entity @p[scores={player_70_menu=1}] as @a[scores={player_70_menu=1}]
 #Start Prefix
 #End Prefix🔥 🌊
 #["",{"color":"#F7630C","text":"[🔥]","clickEvent":{"action":"run_command","value":"/trigger prefix set 2"}},{"text":"[🌊]","color":"#23CBF6","clickEvent":{"action":"run_command","value":"/trigger prefix set 3"}}]
-execute if entity @s[team=player_70,scores={prefix=2..17}] run scoreboard players operation @s prefix_storage = @s prefix
+execute if entity @s[team=player_70,scores={prefix=2..18}] run scoreboard players operation @s prefix_storage = @s prefix
 execute if entity @s[team=player_70,scores={prefix=2}] run team modify player_70 prefix ["",{"text":"🔥","color":"#F7630C","clickEvent":{"action":"run_command","value":"/trigger player_70_menu set 1"}}]
 execute if entity @s[team=player_70,scores={prefix=3}] run team modify player_70 prefix ["",{"text":"🌊","color":"#23CBF6","clickEvent":{"action":"run_command","value":"/trigger player_70_menu set 1"}}]
 execute if entity @s[team=player_70,scores={prefix=4}] run team modify player_70 prefix ["",{"text":"🗡","color":"#727273","clickEvent":{"action":"run_command","value":"/trigger player_70_menu set 1"}}]
