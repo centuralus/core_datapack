@@ -185,6 +185,13 @@ execute if entity @p[tag=lightning_buff] as @a[tag=lightning_buff] at @s anchore
 execute if entity @p[tag=lightning_buff] as @a[tag=lightning_buff] run title @s actionbar {"text":"⚡","color":"#FFC83D"}
 execute if entity @p[tag=lightning_buff] as @a[tag=lightning_buff] run tag @s remove lightning_buff
 
+#pickaxe_buff haste
+execute if entity @p[scores={prefix_storage=12,buff_timer=220..}] as @a[scores={prefix_storage=12,buff_timer=220..}] run tag @s add pickaxe_buff
+execute if entity @p[scores={prefix_storage=12,buff_timer=220..}] as @a[scores={prefix_storage=12,buff_timer=220..}] run scoreboard players reset @s buff_timer
+execute if entity @p[tag=pickaxe_buff] as @a[tag=pickaxe_buff] run effect give @s minecraft:haste 8 1 true
+#execute if entity @p[tag=pickaxe_buff] as @a[tag=pickaxe_buff] at @s positioned ~ ~3 ~ run function core:particle/pickaxe_buff
+execute if entity @p[tag=pickaxe_buff] as @a[tag=pickaxe_buff] run title @s actionbar {"text":"⛏","color":"#0F0F0F"}
+execute if entity @p[tag=pickaxe_buff] as @a[tag=pickaxe_buff] run tag @s remove pickaxe_buff
 
 #heart buff_timer
 execute if entity @p[scores={prefix_storage=14,buff_timer=420..}] as @a[scores={prefix_storage=14,buff_timer=420..}] run tag @s add heart_buff
