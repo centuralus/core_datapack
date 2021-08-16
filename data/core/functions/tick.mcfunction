@@ -1,12 +1,21 @@
 #Mark as active unless storage has information alread.
 #execute unless data storage core:tick * run data modify storage core:tick tick set value 1b
 
+#Old Code
 #execute if entity @p run function core:chesttrade/tick
+
+# For Unique Identifier 2-71
 execute if entity @p as @a run function core:unique/tick
-#execute if entity @p run function core:echest/tick
+
+# For Ender Chest /trigger ender_chest
+execute if entity @p run function core:echest/tick
+
+# May be unused?
 #execute if entity @p run function core:trade/tick
 
-#execute if entity @p[team=operator,tag=operator] as @a[team=operator,tag=operator] run function core:operator/tick
+# If an operator is online run operator code
+execute if entity @p[team=operator,tag=operator] as @a[team=operator,tag=operator] run function core:operator/tick
+
 #execute if entity @p run function core:player/tick
 #execute if entity @p run function core:hostile/tick
 
