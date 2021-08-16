@@ -1,3 +1,4 @@
+
 particle portal ^0.000 ^1.040 ^-0.997 0 0 0 0 1 force @a
 particle portal ^0.000 ^1.060 ^-0.994 0 0 0 0 1 force @a
 particle portal ^0.001 ^1.080 ^-0.989 0 0 0 0 1 force @a

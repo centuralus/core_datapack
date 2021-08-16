@@ -1,3 +1,4 @@
+
 particle flame ^-0.448 ^0.547 ^-0.708 0 0 0 0 1 force @a
 particle flame ^0.491 ^-0.488 ^-0.722 0 0 0 0 1 force @a
 particle flame ^-0.298 ^0.609 ^-0.735 0 0 0 0 1 force @a
