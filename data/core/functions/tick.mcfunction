@@ -16,7 +16,8 @@ execute if entity @p run function core:echest/tick
 # If an operator is online run operator code
 execute if entity @p[team=operator,tag=operator] as @a[team=operator,tag=operator] run function core:operator/tick
 
-#execute if entity @p run function core:player/tick
+# If player is online run player code
+execute if entity @p run function core:player/tick
 #execute if entity @p run function core:hostile/tick
 
 #execute if entity @p run function core:logout/tick
