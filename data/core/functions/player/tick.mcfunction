@@ -211,4 +211,13 @@ execute if entity @p[tag=shield_buff] as @a[tag=shield_buff] run title @s action
 execute if entity @p[tag=shield_buff] as @a[tag=shield_buff] run tag @s remove shield_buff
 
 
+#speed_buff
+
+execute if entity @p[scores={prefix_storage=18,buff_timer=220..}] as @a[scores={prefix_storage=18,buff_timer=220..}] run tag @s add speed_buff
+execute if entity @p[scores={prefix_storage=18,buff_timer=220..}] as @a[scores={prefix_storage=18,buff_timer=220..}] run scoreboard players reset @s buff_timer
+execute if entity @p[tag=speed_buff] as @a[tag=speed_buff] run effect give @s minecraft:speed 8 1 true
+execute if entity @p[tag=speed_buff] as @a[tag=speed_buff] run title @s actionbar {"text":"[❦]","color":"#149414"}
+execute if entity @p[tag=speed_buff] as @a[tag=speed_buff] run tag @s remove speed_buff
+
+
 #End Prefix Buffs
