@@ -203,7 +203,7 @@ execute if entity @p[tag=heart_buff] as @a[tag=heart_buff] run tag @s remove hea
 
 #shield_buff
 
-execute if entity @p[scores={prefix_storage=16,buff_timer=0..160}] as @a[scores={prefix_storage=16,buff_timer=0..160}] at @s positioned ~ ~1 ~ run function core:animate/defence_buff/animate
+execute if entity @p[scores={prefix_storage=16,buff_timer=0..160}] as @a[scores={prefix_storage=16,buff_timer=0..160}] at @s anchored feet align x align y align z positioned ~.25 ~ ~.25 facing entity @s feet run function core:animate/defence_buff/animate
 execute if entity @p[scores={prefix_storage=16,buff_timer=520..}] as @a[scores={prefix_storage=16,buff_timer=520..}] run tag @s add shield_buff
 execute if entity @p[scores={prefix_storage=16,buff_timer=520..}] as @a[scores={prefix_storage=16,buff_timer=520..}] run scoreboard players reset @s buff_timer
 execute if entity @p[tag=shield_buff] as @a[tag=shield_buff] run effect give @s minecraft:resistance 8 1 true

@@ -123,7 +123,10 @@ execute if entity @p[tag=logout_reset] as @a[tag=logout_reset] run scoreboard pl
 execute if entity @p[tag=logout_reset] as @a[tag=logout_reset] run scoreboard players reset @s return
 
 
-#
+#Set previous prefix
+execute if entity @p[tag=logout_reset] as @a[tag=logout_reset] run scoreboard players operation @s prefix = @s prefix_storage 
+
+
 
 # Reset logout_reset scoreboard
 execute if entity @p[tag=logout_reset] as @a[tag=logout_reset] run scoreboard players reset @s logout_reset
