@@ -184,7 +184,7 @@ execute if entity @p[tag=lightning_buff,scores={sneak_timer=20..}] as @a[tag=lig
 #execute if entity @p[tag=lightning_buff] as @a[tag=lightning_buff] at @s positioned ~ ~3 ~ run function core:particle/lightning_buff
 execute if entity @p[tag=lightning_buff] as @a[tag=lightning_buff] run title @s actionbar {"text":"⚡","color":"#FFC83D"}
 execute if entity @p[tag=lightning_buff,scores={sneak_timer=20..}] as @a[tag=lightning_buff,scores={sneak_timer=20..}] run tag @s remove lightning_buff
-execute if entity @p[scores={sneak_timer=20..}] as @a[scores={sneak_timer=20..}] run scoreboard objectives reset @s sneak_timer
+execute if entity @p[scores={sneak_timer=20..}] as @a[scores={sneak_timer=20..}] run scoreboard players reset @s sneak_timer
 
 #pickaxe_buff haste
 execute if entity @p[scores={prefix_storage=12,buff_timer=220..}] as @a[scores={prefix_storage=12,buff_timer=220..}] run tag @s add pickaxe_buff
